@@ -1,0 +1,36 @@
+/*****************************************************************************
+text-styles.scss
+
+Définition de styles de textes 
+
+/******************************************************************************/
+
+
+
+/******************************************************************************/
+/************ Styles de titres
+/******************************************************************************/
+
+#css-overrides h1 {
+    font-family: $mainTitleFamilly;
+    font-size: $mainTitleSize;
+    color: $mainTitleColor;
+    font-weight: bold;
+}
+
+#css-overrides h2,
+#css-overrides h3 {
+    font-family: $mainTitleFamilly;
+    font-size: $mainSubTitleSize;
+    color: $mainSubTitleColor;
+    font-weight: normal;
+}
+
+#css-overrides h3 {
+    font-size: $mainSectionTitleSize;
+    font-weight: bold;
+}
+
+/******************************************************************************/
+/************ Style de textes
+/*****************************************************************************/

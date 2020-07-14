@@ -1,0 +1,42 @@
+/*****************************************************************************
+Variables.scss
+
+Variables permettant de centraliser/personnaliser l'aspect visuel du site
+/******************************************************************************/
+
+
+/******************************************************************************/
+/******************************* Variables Sass    ******************************/
+/******************************************************************************/
+
+//H1
+$mainTitleFamilly : "Roboto Condensed";
+$mainTitleSize : 36px;
+$mainTitleColor : rgb(98, 94, 93);
+
+//H2
+$mainSubTitleSize : 24px;
+$mainSubTitleColor : rgb(247, 133, 2);
+
+//H3
+$mainSectionTitleSize : 20px;
+
+//p, ul
+$mainTextSize: 15px;
+
+$siteBackgroundColor: rgb(210,210,210);
+
+
+/******************************************************************************/
+/******************************* Media breakpoints*****************************/
+/******************************************************************************/
+
+//Reprend les conventions de noms et valeurs de bootstrap
+$xs : 200px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//Taille du conteneur principal de la page
+$mainContainerWidth : 900px;

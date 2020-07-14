@@ -1,0 +1,42 @@
+/*****************************************************************************
+bootstrap.scss
+
+Surcharge des styles spécifiques à Bootstrap
+/******************************************************************************/
+
+
+/******************************************************************************/
+/******************************* Bootstrap container/
+/******************************************************************************/
+
+@media (min-width: $xs) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
+@media (min-width: $sm) {
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}
+
+//À partir de la dimension d'écran lg, la largeur du container ne peut pas dépasser mainContainerWidth
+//En dessous de lg, la largeur est de 100% 
+// https://getbootstrap.com/docs/4.4/layout/overview/#containers
+@media (min-width: $lg) {
+    #css-overrides .container-lg {
+        width: $mainContainerWidth;
+    }
+}
+
+
+
