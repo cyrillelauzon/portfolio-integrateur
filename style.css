@@ -40,10 +40,31 @@ Définition de styles de textes
   font-weight: bold;
 }
 
+#css-overrides h4 {
+  font-size: 12px;
+  color: #f78502;
+  font-weight: bold;
+}
+
+#css-overrides .red {
+  color: #ff425f;
+}
+
+#css-overrides .yellow {
+  color: #f78502;
+}
+
+#css-overrides .green {
+  color: #589935;
+}
+
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
-#css-overrides p, #css-overrides ul, #css-overrides a {
+#css-overrides p,
+#css-overrides ul,
+#css-overrides a {
+  font-family: "Roboto Condensed";
   font-size: 12px;
   color: #625e5d;
   font-weight: normal;
@@ -51,6 +72,7 @@ Définition de styles de textes
 
 #css-overrides ul {
   list-style-type: none;
+  padding-left: 0px;
 }
 
 #css-overrides li {
@@ -176,9 +198,56 @@ Surcharge des styles spécifiques à Bootstrap
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/
+#section-competences {
+  background-color: #231f22;
+  height: 600px;
+}
+
+#section-competences-code {
+  background-color: #2e2a2e !important;
+  position: relative;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+#section-competences-code-lines {
+  background-color: #2e2a2e;
+  width: 40px;
+  height: 100%;
+  border-right: solid 1px #625e60;
+}
+
+#section-competences-code-lines p {
+  margin-left: 5px;
+  color: #625e60;
+  font-size: 12px;
+}
+
+#section-competences-contenu {
+  padding-top: 20px;
+  margin-left: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+#section-competences-contenu ul {
+  color: #fcfcfa;
+}
+
 /******************************************************************************/
 /************ Section Réalisations
 /*****************************************************************************/
+#section-realisations {
+  padding-top: 20px;
+  background-color: #d2d2d2;
+  height: 600px;
+}
+
+#section-realisations h3 {
+  color: #589935;
+}
+
 /******************************************************************************/
 /************ Section Expériences de travail
 /*****************************************************************************/

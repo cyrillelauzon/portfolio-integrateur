@@ -31,21 +31,44 @@ Définition de styles de textes
     font-weight: bold;
 }
 
+#css-overrides h4 {
+    font-size: $mainTextSize;
+    color: rgb(247, 133, 2);
+    font-weight: bold;
+}
+
+#css-overrides .red {
+    color: rgb(255, 66, 95);
+}
+
+#css-overrides .yellow {
+    color: rgb(247, 133, 2);
+}
+
+#css-overrides .green {
+    color: $green;
+}
+
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
 
-#css-overrides p, #css-overrides ul, #css-overrides a  {
+#css-overrides p,
+#css-overrides ul,
+#css-overrides a {
+    font-family: $mainTitleFamilly;
     font-size: $mainTextSize;
-    color : $mainTextColor;
+    color: $mainTextColor;
     font-weight: normal;
 }
 
+
 #css-overrides ul {
     list-style-type: none;
-
+    padding-left: 0px;
 }
 
 #css-overrides li {
     margin-top: 10px;
+
 }
