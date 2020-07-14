@@ -8,6 +8,25 @@
 @import "_css/bootstrap";
 
 
+/******************************************************************************/
+/************ Éléments de page
+/*****************************************************************************/
+
+.header-img {
+    width: 100%;
+    height: 200px;
+}
+
+.img-profile {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.img-media-icon {
+    width: 20px;
+    height: 20px;
+}
 
 /******************************************************************************/
 /************ Corps de la page
@@ -15,11 +34,63 @@
 
 #css-overrides {
     overflow-y: scroll;
+    background-color: white;
+}
+
+#css-overrides .container-lg {
     background-color: $siteBackgroundColor;
 }
 
-#section-bio{
-    height : 900px;
+/******************************************************************************/
+/************ Section Bio
+/*****************************************************************************/
+
+#section-bio-header {
+    height: 200px;
+    background-color: $siteBackgroundColor;
+    z-index: 2;
+}
+
+#section-bio-header-content {
+    position: relative;
+    top: 125px;
+    height: 200px;
+    width: 100%;
+    background-color: transparent !important; //TODO remove hack
+
+}
+
+#section-bio {
+    z-index: 1;
+    height: 400px;
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center, 540px;
+}
+
+/******************************************************************************/
+/************ Section Compétences
+/*****************************************************************************/
+
+#section-competences {
+background-color: ;
+
 }
 
 
+
+/******************************************************************************/
+/************ Section Réalisations
+/*****************************************************************************/
+
+
+/******************************************************************************/
+/************ Section Expériences de travail
+/*****************************************************************************/
+
+
+/******************************************************************************/
+/************ Section Contact
+/*****************************************************************************/

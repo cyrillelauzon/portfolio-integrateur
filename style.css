@@ -43,6 +43,20 @@ Définition de styles de textes
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
+#css-overrides p, #css-overrides ul, #css-overrides a {
+  font-size: 12px;
+  color: #625e5d;
+  font-weight: normal;
+}
+
+#css-overrides ul {
+  list-style-type: none;
+}
+
+#css-overrides li {
+  margin-top: 10px;
+}
+
 /*****************************************************************************
 animations.scss
 
@@ -97,15 +111,78 @@ Surcharge des styles spécifiques à Bootstrap
   }
 }
 
+#css-overrides .container-fluid {
+  padding: 0px;
+}
+
+/******************************************************************************/
+/************ Éléments de page
+/*****************************************************************************/
+.header-img {
+  width: 100%;
+  height: 200px;
+}
+
+.img-profile {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.img-media-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /******************************************************************************/
 /************ Corps de la page
 /*****************************************************************************/
 #css-overrides {
   overflow-y: scroll;
+  background-color: white;
+}
+
+#css-overrides .container-lg {
   background-color: #d2d2d2;
 }
 
-#section-bio {
-  height: 900px;
+/******************************************************************************/
+/************ Section Bio
+/*****************************************************************************/
+#section-bio-header {
+  height: 200px;
+  background-color: #d2d2d2;
+  z-index: 2;
 }
+
+#section-bio-header-content {
+  position: relative;
+  top: 125px;
+  height: 200px;
+  width: 100%;
+  background-color: transparent !important;
+}
+
+#section-bio {
+  z-index: 1;
+  height: 400px;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center, 540px;
+}
+
+/******************************************************************************/
+/************ Section Compétences
+/*****************************************************************************/
+/******************************************************************************/
+/************ Section Réalisations
+/*****************************************************************************/
+/******************************************************************************/
+/************ Section Expériences de travail
+/*****************************************************************************/
+/******************************************************************************/
+/************ Section Contact
+/*****************************************************************************/
 /*# sourceMappingURL=style.css.map */

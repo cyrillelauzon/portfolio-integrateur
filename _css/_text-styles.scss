@@ -34,3 +34,18 @@ Définition de styles de textes
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
+
+#css-overrides p, #css-overrides ul, #css-overrides a  {
+    font-size: $mainTextSize;
+    color : $mainTextColor;
+    font-weight: normal;
+}
+
+#css-overrides ul {
+    list-style-type: none;
+
+}
+
+#css-overrides li {
+    margin-top: 10px;
+}

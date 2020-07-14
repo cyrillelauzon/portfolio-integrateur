@@ -30,10 +30,61 @@
 
   <!-- #css-overrides permet de surcharger le css des classes affectées par bootstrap sans utiliser !important -->
   <body id="css-overrides">
-    <main role="main" class="container">
+    <main role="main" class="container-fluid">
       <!-- Section Bio -->
-      <section id="section-bio">
-        <div></div>
+      <section>
+        <div id="section-bio-header">
+          <div id="section-bio-header-content" class="container-lg text-right">
+            <div class="row">
+              <div class="col-lg-4">
+                <img class="img-profile" src="img/profile-pic.jpg" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 text-right">
+                <h1>Cyrille Lauzon</h1>
+                <h2>Intégrateur web</h2>
+                <ul>
+                  <li>
+                    <a href="https://github.com/cyrillelauzon" target="_blank"
+                      > <img class="img-media-icon" src="img/github.svg"
+                    /></a>
+                  &nbsp;
+                    <a
+                      href="https://www.linkedin.com/in/cyrille-lauzon-8b4aa91b1/"
+                      target="_blank"
+                      >
+                      <img class="img-media-icon" src="img/linkedin.svg"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="mailto:cyrillelauzon@gmail.com"
+                      >cyrillelauzon@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-1">&nbsp;</div>
+              <div class="col-lg-7">
+                <p>
+                  Quisque in augue. Donec aliquam magna nonummy enim. Proin
+                  blandit imperdiet sem. Donec malesuada, urna sit amet varius
+                  aliquam, nibh tortor laoreet turpis, eget sodales felis nibh
+                  ac sapien. Fusce eget augue. Integer sed risus. Aenean mollis.
+                  Donec facilisis egestas quam. Duis bibendum augue id mauris.
+                  Sed laoreet, tortor vel cursus fringilla, turpis elit
+                  vestibulum arcu, eu varius dolor leo in nulla. In sem ipsum,
+                  faucibus quis, varius tristique, porta eget, lorem. Curabitur
+                  hendrerit diam et mauris. Etiam porta nunc euismod dui.
+                  Maecenas a lectus. In hac habitasse platea dictumst.
+                  Suspendisse id massa. Nullam porta velit sed lacus. Duis
+                  eleifend, felis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section-bio"></div>
       </section>
       <!-- Section Compétences -->
       <section>
@@ -46,7 +97,7 @@
       <!-- Section Expériences de travail -->
       <section>
         <h3>Expériences de travail</h3>
-    </section>
+      </section>
     </main>
 
     <footer></footer>
