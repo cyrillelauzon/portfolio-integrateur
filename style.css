@@ -41,7 +41,7 @@ Définition de styles de textes
 }
 
 #css-overrides h4 {
-  font-size: 12px;
+  font-size: 14px;
   color: #f78502;
   font-weight: bold;
 }
@@ -65,7 +65,7 @@ Définition de styles de textes
 #css-overrides ul,
 #css-overrides a {
   font-family: "Roboto Condensed";
-  font-size: 12px;
+  font-size: 14px;
   color: #625e5d;
   font-weight: normal;
 }
@@ -73,6 +73,10 @@ Définition de styles de textes
 #css-overrides ul {
   list-style-type: none;
   padding-left: 0px;
+}
+
+.ul-dash {
+  list-style-type: "- " !important;
 }
 
 #css-overrides li {
@@ -190,7 +194,6 @@ Surcharge des styles spécifiques à Bootstrap
   height: 400px;
   background-image: url("img/background.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center, 540px;
 }
@@ -200,7 +203,7 @@ Surcharge des styles spécifiques à Bootstrap
 /*****************************************************************************/
 #section-competences {
   background-color: #231f22;
-  height: 600px;
+  height: 500px;
 }
 
 #section-competences-code {
@@ -225,7 +228,8 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 #section-competences-contenu {
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-left: 100px;
   height: 100%;
   width: 100%;
@@ -235,13 +239,18 @@ Surcharge des styles spécifiques à Bootstrap
   color: #fcfcfa;
 }
 
+#section-competences-contenu .muted {
+  color: #625e5d;
+}
+
 /******************************************************************************/
 /************ Section Réalisations
 /*****************************************************************************/
 #section-realisations {
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #d2d2d2;
-  height: 600px;
+  height: 100%;
 }
 
 #section-realisations h3 {
@@ -251,7 +260,37 @@ Surcharge des styles spécifiques à Bootstrap
 /******************************************************************************/
 /************ Section Expériences de travail
 /*****************************************************************************/
+#section-experiences {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fcfcfa;
+  height: 100%;
+}
+
+#section-experiences h3 {
+  color: #625e5d;
+}
+
+#section-experiences h4 {
+  color: #589935;
+}
+
+#section-experiences .container-lg {
+  background-color: #fcfcfa;
+}
+
 /******************************************************************************/
-/************ Section Contact
+/************ Footer
 /*****************************************************************************/
+#css-overrides footer {
+  height: 400px;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, 540px;
+}
+
+#css-overrides footer .container-lg {
+  background-color: transparent !important;
+}
 /*# sourceMappingURL=style.css.map */

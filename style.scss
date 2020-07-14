@@ -41,6 +41,8 @@
     background-color: $siteBackgroundColor;
 }
 
+
+
 /******************************************************************************/
 /************ Section Bio
 /*****************************************************************************/
@@ -64,7 +66,7 @@
     height: 400px;
     background-image: url('img/background.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    //background-attachment: fixed;
     background-size: cover;
     background-position: center, 540px;
 }
@@ -75,7 +77,7 @@
 
 #section-competences {
     background-color: rgb(35,31,34);
-    height: 600px;
+    height: 500px;
 }
 
 #section-competences-code {
@@ -100,13 +102,18 @@
 }
 
 #section-competences-contenu{
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin-left: 100px;
     height: 100%;
     width: 100%;
 
     ul{
-       color : rgb(252,252,250);
+       color : $white;
+    }
+    
+    .muted {
+        color : $mainTextColor;
     }
 }
 
@@ -114,9 +121,10 @@
 /************ Section Réalisations
 /*****************************************************************************/
 #section-realisations {
-    padding-top: 20px;
+    padding-top: 30px;    
+    padding-bottom: 30px;
     background-color: $siteBackgroundColor;
-    height: 600px;
+    height: 100%;
     
     h3{
         color : $green;
@@ -127,7 +135,41 @@
 /************ Section Expériences de travail
 /*****************************************************************************/
 
+#section-experiences{
+    padding-top: 30px;    
+    padding-bottom: 30px;
+    background-color: $white;
+    height: 100%;
+    
+    h3{
+        color : $mainTextColor;
+    }
+    
+    h4{
+        color : $green;
+    }
+
+     .container-lg{
+         background-color: $white;
+     }
+}
 
 /******************************************************************************/
-/************ Section Contact
+/************ Footer
 /*****************************************************************************/
+
+
+#css-overrides footer {
+    //background-color: $siteBackgroundColor;
+    .container-lg{
+        background-color: transparent !important; //TODO remove hack
+    }
+    
+    height: 400px;
+    
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: cover;
+    background-position: center, 540px;
+}
