@@ -12,6 +12,28 @@ Variables permettant de centraliser/personnaliser l'aspect visuel du site
 /******************************* Media breakpoints*****************************/
 /******************************************************************************/
 /*****************************************************************************
+animations.scss
+
+Helpers gestion des animations CSS
+/******************************************************************************/
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*****************************************************************************
 text-styles.scss
 
 Définition de styles de textes 
@@ -70,6 +92,22 @@ Définition de styles de textes
   font-weight: normal;
 }
 
+a {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 #css-overrides ul {
   list-style-type: none;
   padding-left: 0px;
@@ -81,28 +119,6 @@ Définition de styles de textes
 
 #css-overrides li {
   margin-top: 10px;
-}
-
-/*****************************************************************************
-animations.scss
-
-Helpers gestion des animations CSS
-/******************************************************************************/
-@-webkit-keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /*****************************************************************************
@@ -155,6 +171,12 @@ Surcharge des styles spécifiques à Bootstrap
   border-radius: 50%;
 }
 
+.thumbnails {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
 .img-media-icon {
   width: 20px;
   height: 20px;
@@ -191,7 +213,7 @@ Surcharge des styles spécifiques à Bootstrap
 
 #section-bio {
   z-index: 1;
-  height: 400px;
+  height: 500px;
   background-image: url("img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -203,36 +225,48 @@ Surcharge des styles spécifiques à Bootstrap
 /*****************************************************************************/
 #section-competences {
   background-color: #231f22;
-  height: 500px;
+  height: 100%;
+  height: auto;
 }
 
 #section-competences-code {
   background-color: #2e2a2e !important;
   position: relative;
-  left: 200px;
+  left: 10%;
   width: 100%;
   height: 100%;
+  height: auto;
 }
 
 #section-competences-code-lines {
   background-color: #2e2a2e;
-  width: 40px;
+  width: 60px;
   height: 100%;
+  height: auto;
   border-right: solid 1px #625e60;
 }
 
 #section-competences-code-lines p {
-  margin-left: 5px;
+  margin-left: 20px;
+  margin-right: 5px;
   color: #625e60;
   font-size: 12px;
 }
 
 #section-competences-contenu {
   padding-top: 30px;
-  padding-bottom: 30px;
-  margin-left: 100px;
+  padding-bottom: 100px;
+  margin-left: 10%;
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 576px) {
+  #section-competences-contenu {
+    width: 60%;
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+  }
 }
 
 #section-competences-contenu ul {
@@ -248,7 +282,7 @@ Surcharge des styles spécifiques à Bootstrap
 /*****************************************************************************/
 #section-realisations {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   background-color: #d2d2d2;
   height: 100%;
 }
@@ -275,6 +309,10 @@ Surcharge des styles spécifiques à Bootstrap
   color: #589935;
 }
 
+#section-experiences p {
+  text-decoration: underline;
+}
+
 #section-experiences .container-lg {
   background-color: #fcfcfa;
 }
@@ -283,6 +321,7 @@ Surcharge des styles spécifiques à Bootstrap
 /************ Footer
 /*****************************************************************************/
 #css-overrides footer {
+  padding-top: 30px;
   height: 400px;
   background-image: url("img/background.jpg");
   background-repeat: no-repeat;
