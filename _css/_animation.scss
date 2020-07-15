@@ -46,3 +46,13 @@ $shortSpeed : 0.3s;
 @mixin colorChangeOnHover($src, $dest) {
     @include animateTransition(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
  }
+
+
+ //Fonction utilitaire qui change l'image en arrière plan
+ @mixin bgImage($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: cover;
+    background-position: center, 540px;
+}

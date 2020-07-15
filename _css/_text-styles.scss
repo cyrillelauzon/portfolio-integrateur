@@ -12,7 +12,7 @@ Définition de styles de textes
 /******************************************************************************/
 
 #css-overrides h1 {
-    font-family: $mainTitleFamilly;
+    font-family: $mainFontFamilly;
     font-size: $mainTitleSize;
     color: $mainTitleColor;
     font-weight: bold;
@@ -20,7 +20,7 @@ Définition de styles de textes
 
 #css-overrides h2,
 #css-overrides h3 {
-    font-family: $mainTitleFamilly;
+    font-family: $mainFontFamilly;
     font-size: $mainSubTitleSize;
     color: $mainSubTitleColor;
     font-weight: normal;
@@ -33,21 +33,11 @@ Définition de styles de textes
 
 #css-overrides h4 {
     font-size: $mainTextSize;
-    color: rgb(247, 133, 2);
+    color: $mainSubTitleColor;
     font-weight: bold;
 }
 
-#css-overrides .red {
-    color: rgb(255, 66, 95);
-}
 
-#css-overrides .yellow {
-    color: rgb(247, 133, 2);
-}
-
-#css-overrides .green {
-    color: $green;
-}
 
 /******************************************************************************/
 /************ Style de textes
@@ -56,7 +46,7 @@ Définition de styles de textes
 #css-overrides p,
 #css-overrides ul,
 #css-overrides a {
-    font-family: $mainTitleFamilly;
+    font-family: $mainFontFamilly;
     font-size: $mainTextSize;
     color: $mainTextColor;
     font-weight: normal;
@@ -82,4 +72,8 @@ a{
 #css-overrides li {
     margin-top: 10px;
 
+}
+
+.muted {
+    color : $mainTextColor;
 }

@@ -10,29 +10,40 @@ Variables permettant de centraliser/personnaliser l'aspect visuel du site
 /******************************************************************************/
 
 //H1
-$mainTitleFamilly : "Roboto Condensed";
+$mainFontFamilly : "Roboto Condensed";
 $mainTitleSize : 36px;
-$mainTitleColor : rgb(98, 94, 93);
-
-//H2
 $mainSubTitleSize : 24px;
-$mainSubTitleColor : rgb(247, 133, 2);
-
-//H3
 $mainSectionTitleSize : 20px;
+$mainTextSize: 16px;
 
-//p, ul
-$mainTextSize: 14px;
+
+//Couleurs 
+$mainTitleColor : rgb(98, 94, 93);
+$mainSubTitleColor : rgb(247, 133, 2);
 $mainTextColor : rgb(98, 94, 93);
+$highlightTextColor : rgb(252,252,250);
 
+$grayBgColor: rgb(210, 210, 210);
+$mediumDarkBgColor: rgb(46, 42, 46);
+$darkBgColor: rgb(35,31,34);
 
-$siteBackgroundColor: rgb(210, 210, 210);
-$sectionCompetencesBgColor: rgb(46, 42, 46);
-
-
-$white : rgb(252,252,250);
 $green : rgb(88, 153, 53);
+$red: rgb(255, 66, 95);
+$yellow: rgb(247, 133, 2);
+$white: rgb(252,252,250);
 
+//Classes raccourcis
+#css-overrides .red {
+    color: $red;
+}
+
+#css-overrides .yellow {
+    color: $yellow;
+}
+
+#css-overrides .green {
+    color: $green;
+}
 
 /******************************************************************************/
 /******************************* Media breakpoints*****************************/

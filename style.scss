@@ -9,7 +9,7 @@
 
 
 /******************************************************************************/
-/************ Éléments de page
+/************ Images
 /*****************************************************************************/
 
 .header-img {
@@ -48,7 +48,7 @@
 }
 
 #css-overrides .container-lg {
-    background-color: $siteBackgroundColor;
+    background-color: $grayBgColor;
 }
 
 
@@ -59,7 +59,7 @@
 
 #section-bio-header {
     height: 200px;
-    background-color: $siteBackgroundColor;
+    background-color: $grayBgColor;
     z-index: 2;
 }
 
@@ -74,11 +74,7 @@
 #section-bio {
     z-index: 1;
     height: 500px;
-    background-image: url('img/background.jpg');
-    background-repeat: no-repeat;
-    //background-attachment: fixed;
-    background-size: cover;
-    background-position: center, 540px;
+    @include bgImage('img/background.jpg');
 }
 
 /******************************************************************************/
@@ -86,13 +82,13 @@
 /*****************************************************************************/
 
 #section-competences {
-    background-color: rgb(35,31,34);
+    background-color: $darkBgColor;
     height: 100%;
     height: auto;
 }
 
 #section-competences-code {
-    background-color: rgb(46,42,46) !important;
+    background-color: $mediumDarkBgColor !important;
     position: relative;
     left: 10%;
     width: 100%;
@@ -101,16 +97,15 @@
 }
 
 #section-competences-code-lines {
-    background-color: rgb(46,42,46);  
+    background-color: $mediumDarkBgColor;  
     width: 60px;
     height: 100%;
     height: auto;
-    border-right: solid 1px  rgb(98,94,96);
-
+    border-right: solid 1px $mainTextColor;
     p{
         margin-left: 20px;
         margin-right: 5px ;
-        color: rgb(98,94,96);
+        color:$mainTextColor;
         font-size: 12px;
     }
 }
@@ -128,12 +123,10 @@
     }
 
     ul{
-       color : $white;
+       color : $highlightTextColor;
     }
     
-    .muted {
-        color : $mainTextColor;
-    }
+
 }
 
 /******************************************************************************/
@@ -142,7 +135,7 @@
 #section-realisations {
     padding-top: 30px;    
     padding-bottom: 100px;
-    background-color: $siteBackgroundColor;
+    background-color: $grayBgColor;
     height: 100%;
     
     h3{
@@ -183,17 +176,13 @@
 
 
 #css-overrides footer {
-    //background-color: $siteBackgroundColor;
+    //background-color: $grayBgColor;
     padding-top: 30px;    
     .container-lg{
         background-color: transparent !important; //TODO remove hack
     }
     
     height: 400px;
+    @include bgImage('img/background.jpg');
     
-    background-image: url('img/background.jpg');
-    background-repeat: no-repeat;
-    //background-attachment: fixed;
-    background-size: cover;
-    background-position: center, 540px;
 }
