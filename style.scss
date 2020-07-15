@@ -24,12 +24,14 @@
 }
 
 .thumbnails {
-    max-width: 300px;
+  //  max-width: 300px;
     width: 100%;
     height: auto;
 
     @media (max-width: $sm) {
-        width: 90%;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -77,6 +79,20 @@
     @include bgImage('img/background.jpg');
 }
 
+#section-bio-text{
+    position: relative;
+    top: 125px;
+
+    @media (max-width: $md) {
+        //width: 65%;
+        top:0px;
+       // text-align: right !important;
+
+    }
+
+
+}
+
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/
@@ -106,7 +122,7 @@
         margin-left: 20px;
         margin-right: 5px ;
         color:$mainTextColor;
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
@@ -117,9 +133,22 @@
     height: 100%;
     width: 100%;
 
-    @media (max-width: $sm) {
-        width: 60%;
+    
+    @media (max-width: $lg) {
+        width: 80%;
+        padding-left: 0px;
+        margin-left: 25px;
         flex-basis: unset;
+    }
+
+    @media (max-width: $md) {
+      //  width: 86%;
+        
+        flex-basis: unset;
+    }
+
+    @media (max-width: $sm) {
+        width: 65%;
     }
 
     ul{
