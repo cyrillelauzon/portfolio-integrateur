@@ -27,6 +27,10 @@
     max-width: 300px;
     width: 100%;
     height: auto;
+
+    @media (max-width: $sm) {
+        width: 90%;
+    }
 }
 
 .img-media-icon {

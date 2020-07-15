@@ -177,6 +177,12 @@ Surcharge des styles spécifiques à Bootstrap
   height: auto;
 }
 
+@media (max-width: 576px) {
+  .thumbnails {
+    width: 90%;
+  }
+}
+
 .img-media-icon {
   width: 20px;
   height: 20px;
