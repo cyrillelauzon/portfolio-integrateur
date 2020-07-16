@@ -1,10 +1,36 @@
 
 
+//Gestion du chargement de page et animations:
+document.body.classList.add('js-Page-Loading');
+window.addEventListener("load", AfficherAnimations);
+
+function AfficherAnimations() {
+  document.body.classList.remove('js-Page-Loading');
+}
+
+
+
 //Fade in sur scroll
 window.onscroll = function () {
-    FadeInDiv("#section-competences", 0.6);
+   
+    //Animations section competence
+    let curY = window.scrollY;
+    let divCompetences = document.querySelector("#section-competences-contenu");
+    let divMarge = document.querySelector("#section-competences-code");
+    if(curY > 400){
+        divCompetences.classList.add("animerCompetences");
+        divMarge.classList.add("animerMargeCompetences");
+    }
+    else 
+    {
+        divCompetences.classList.remove("animerCompetences");
+        divMarge.classList.remove("animerMargeCompetences");
+    }
+    
+   // FadeInDiv("#section-competences", 0.6);
     FadeInDiv("#section-realisations");
     FadeInDiv("#section-experiences");
+    
 };
 
 

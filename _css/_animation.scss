@@ -6,9 +6,17 @@ Helpers gestion des animations CSS
 
 
 //variables
-$shortSpeed : 0.3s;
+$shortSpeed : 0.5s;
+
+//Est enlevé par javascript lorsque la page est chargée
+.js-Page-Loading *,
+.js-Page-Loading *:before,
+.js-Page-Loading *:after {
+  animation-play-state: paused !important;
+}
 
 
+//Permet d'animer un fade-in sur la page par exemple
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -56,4 +64,17 @@ $shortSpeed : 0.3s;
     background-size: cover;
     background-position: center, 540px;
 }
+
+//Slidein de la section Bio
+@keyframes FadeInBio {
+    0% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 
