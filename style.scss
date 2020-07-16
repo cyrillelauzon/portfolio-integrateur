@@ -70,12 +70,18 @@
 
 #section-bio-header-content {
     animation: 1s ease-out 0s 1 FadeInBio;
-//    transition: all 0.5s;
     position: relative;
     top: 125px;
     height: 200px;
     width: 100%;
+    opacity: 1;
+    
     background-color: transparent !important; //TODO remove hack
+}
+
+.animer-bio-header-content {
+    top: 100px !important;
+    opacity: 0.4 !important;
 }
 
 #section-bio-header-text {
@@ -150,7 +156,7 @@
     margin-left: 5%;
     transition: padding-left 0.5s;
     height: 100%;
-    width: 75%;
+    width: 78%;
     flex-basis: unset;
 
     @media (max-width: $lg) {

@@ -1,3 +1,9 @@
+/*****************************************************************************
+index.js
+
+Gestion des animations déclenchées par défilement
+/******************************************************************************/
+
 
 
 //Gestion du chargement de page et animations:
@@ -14,9 +20,11 @@ function AfficherAnimations() {
 window.onscroll = function () {
    
     //Animations section competence
+    //TODO refactoriser en fonction
     let curY = window.scrollY;
     let divCompetences = document.querySelector("#section-competences-contenu");
     let divMarge = document.querySelector("#section-competences-code");
+    
     if(curY > 400){
         divCompetences.classList.add("animerCompetences");
         divMarge.classList.add("animerMargeCompetences");

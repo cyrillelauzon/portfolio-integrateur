@@ -9,6 +9,7 @@ Helpers gestion des animations CSS
 $shortSpeed : 0.5s;
 
 //Est enlevé par javascript lorsque la page est chargée
+//Permet de lancer les animations à ce moment
 .js-Page-Loading *,
 .js-Page-Loading *:before,
 .js-Page-Loading *:after {
@@ -52,7 +53,7 @@ $shortSpeed : 0.5s;
 
 //Uniformisation des changements de couleur sur Hover
 @mixin colorChangeOnHover($src, $dest) {
-    @include animateTransitionHover(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
+    @include animateTransitionHover(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransitionHover
  }
 
 
@@ -66,7 +67,7 @@ $shortSpeed : 0.5s;
 }
 
 //Slidein de la section Bio
-@keyframes FadeInBio {
+ @keyframes FadeInBio {
     0% {
       transform: translateY(-10%);
       opacity: 0;
@@ -75,6 +76,6 @@ $shortSpeed : 0.5s;
       transform: translateY(0);
       opacity: 1;
     }
-  }
+  } 
 
 
