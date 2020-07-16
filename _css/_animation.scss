@@ -27,7 +27,7 @@ $shortSpeed : 0.3s;
 
 
 //Formule générique pour animer une transition sur propriété donnée
-@mixin animateTransition($property, $src, $dest) {
+@mixin animateTransitionHover($property, $src, $dest) {
     #{$property}: $dest;
     transition: #{$property} $shortSpeed ease-in-out;
 
@@ -39,12 +39,12 @@ $shortSpeed : 0.3s;
 
 //Raccourci pour uniformiser les fade-in fade-out d'éléments à travers le site
 @mixin opacityFadeOnHover($opacity) {
-   @include animateTransition(opacity, $opacity, 1);
+   @include animateTransitionHover(opacity, $opacity, 1);
 }
 
 //Uniformisation des changements de couleur sur Hover
 @mixin colorChangeOnHover($src, $dest) {
-    @include animateTransition(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
+    @include animateTransitionHover(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
  }
 
 
@@ -52,7 +52,8 @@ $shortSpeed : 0.3s;
  @mixin bgImage($url) {
     background-image: url($url);
     background-repeat: no-repeat;
-    //background-attachment: fixed;
+  //  background-attachment: fixed;
     background-size: cover;
     background-position: center, 540px;
 }
+

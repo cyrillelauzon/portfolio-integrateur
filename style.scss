@@ -24,7 +24,7 @@
 }
 
 .thumbnails {
-  //  max-width: 300px;
+    //  max-width: 300px;
     width: 100%;
     height: auto;
 
@@ -46,6 +46,7 @@
 
 #css-overrides {
     overflow-y: scroll;
+    overflow-x: hidden;
     background-color: white;
 }
 
@@ -63,9 +64,11 @@
     height: 200px;
     background-color: $grayBgColor;
     z-index: 2;
+    
 }
 
 #section-bio-header-content {
+    transition: all 0.5s;
     position: relative;
     top: 125px;
     height: 200px;
@@ -73,25 +76,21 @@
     background-color: transparent !important; //TODO remove hack
 }
 
-#section-bio {
+#section-bio-header-text {
+    transition: all 0.5s;
+
+    @media (max-width: $md) {
+        background-color: whitesmoke;
+        transition: background-color 0.5s;
+    }
+}
+
+#section-bio-banner {
     z-index: 1;
     height: 500px;
     @include bgImage('img/background.jpg');
 }
 
-#section-bio-text{
-    position: relative;
-    top: 125px;
-
-    @media (max-width: $md) {
-        //width: 65%;
-        top:0px;
-       // text-align: right !important;
-
-    }
-
-
-}
 
 /******************************************************************************/
 /************ Section Compétences
@@ -101,49 +100,59 @@
     background-color: $darkBgColor;
     height: 100%;
     height: auto;
+    opacity: 0.75;
 }
 
 #section-competences-code {
     background-color: $mediumDarkBgColor !important;
     position: relative;
     left: 10%;
+    transition: left 0.5s;
     width: 100%;
     height: 100%;
     height: auto;
+
+    @media (max-width: $lg) {
+        left: 0px;
+        transition: left 0.5s;
+    }
 }
 
 #section-competences-code-lines {
-    background-color: $mediumDarkBgColor;  
+    background-color: $mediumDarkBgColor;
     width: 60px;
     height: 100%;
     height: auto;
     border-right: solid 1px $mainTextColor;
-    p{
+
+    p {
         margin-left: 20px;
-        margin-right: 5px ;
-        color:$mainTextColor;
+        margin-right: 5px;
+        color: $mainTextColor;
         font-size: 16px;
     }
 }
 
-#section-competences-contenu{
+#section-competences-contenu {
     padding-top: 30px;
     padding-bottom: 100px;
     margin-left: 10%;
+    transition: padding-left 0.5s;
     height: 100%;
     width: 100%;
 
-    
+
     @media (max-width: $lg) {
         width: 80%;
         padding-left: 0px;
+        transition: padding-left 0.5s;
         margin-left: 25px;
         flex-basis: unset;
     }
 
     @media (max-width: $md) {
-      //  width: 86%;
-        
+        //  width: 86%;
+
         flex-basis: unset;
     }
 
@@ -151,10 +160,10 @@
         width: 65%;
     }
 
-    ul{
-       color : $highlightTextColor;
+    ul {
+        color: $highlightTextColor;
     }
-    
+
 
 }
 
@@ -162,41 +171,56 @@
 /************ Section Réalisations
 /*****************************************************************************/
 #section-realisations {
-    padding-top: 30px;    
+   // transition: all 0.5s;
+    padding-top: 30px;
     padding-bottom: 100px;
     background-color: $grayBgColor;
     height: 100%;
-    
-    h3{
-        color : $green;
-     }
+    opacity: 0.5;
+
+    h3 {
+        color: $green;
+    }
+}
+
+//Responsive, permet d'éviter changements de positions brutes lors
+//de redimensionnement de page
+#section-realisations :first-child{
+    transition: all 0.5s;
 }
 
 /******************************************************************************/
 /************ Section Expériences de travail
 /*****************************************************************************/
 
-#section-experiences{
-    padding-top: 30px;    
+#section-experiences {
+
+    padding-top: 30px;
     padding-bottom: 30px;
     background-color: $white;
     height: 100%;
-    
-    h3{
-        color : $mainTextColor;
-    }
-    
-    h4{
-        color : $green;
+
+    h3 {
+        color: $mainTextColor;
     }
 
-    p{
+    h4 {
+        color: $green;
+    }
+
+    p {
         text-decoration: underline;
     }
 
-     .container-lg{
-         background-color: $white;
-     }
+    .container-lg {
+        background-color: $white;
+    }
+}
+
+//Responsive, permet d'éviter changements de positions brutes lors
+//de redimensionnement de page
+#section-experiences :first-child{
+    transition: all 0.5s;
 }
 
 /******************************************************************************/
@@ -206,12 +230,13 @@
 
 #css-overrides footer {
     //background-color: $grayBgColor;
-    padding-top: 30px;    
-    .container-lg{
+    padding-top: 30px;
+
+    .container-lg {
         background-color: transparent !important; //TODO remove hack
     }
-    
+
     height: 400px;
     @include bgImage('img/background.jpg');
-    
+
 }

@@ -198,6 +198,7 @@ Surcharge des styles spécifiques à Bootstrap
 /*****************************************************************************/
 #css-overrides {
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: white;
 }
 
@@ -215,6 +216,8 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 #section-bio-header-content {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   position: relative;
   top: 125px;
   height: 200px;
@@ -222,24 +225,26 @@ Surcharge des styles spécifiques à Bootstrap
   background-color: transparent !important;
 }
 
-#section-bio {
+#section-bio-header-text {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+  #section-bio-header-text {
+    background-color: whitesmoke;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+}
+
+#section-bio-banner {
   z-index: 1;
   height: 500px;
   background-image: url("img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, 540px;
-}
-
-#section-bio-text {
-  position: relative;
-  top: 125px;
-}
-
-@media (max-width: 768px) {
-  #section-bio-text {
-    top: 0px;
-  }
 }
 
 /******************************************************************************/
@@ -249,15 +254,26 @@ Surcharge des styles spécifiques à Bootstrap
   background-color: #231f22;
   height: 100%;
   height: auto;
+  opacity: 0.75;
 }
 
 #section-competences-code {
   background-color: #2e2a2e !important;
   position: relative;
   left: 10%;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
   width: 100%;
   height: 100%;
   height: auto;
+}
+
+@media (max-width: 992px) {
+  #section-competences-code {
+    left: 0px;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+  }
 }
 
 #section-competences-code-lines {
@@ -279,6 +295,8 @@ Surcharge des styles spécifiques à Bootstrap
   padding-top: 30px;
   padding-bottom: 100px;
   margin-left: 10%;
+  -webkit-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
   height: 100%;
   width: 100%;
 }
@@ -287,6 +305,8 @@ Surcharge des styles spécifiques à Bootstrap
   #section-competences-contenu {
     width: 80%;
     padding-left: 0px;
+    -webkit-transition: padding-left 0.5s;
+    transition: padding-left 0.5s;
     margin-left: 25px;
     -ms-flex-preferred-size: unset;
         flex-basis: unset;
@@ -318,10 +338,16 @@ Surcharge des styles spécifiques à Bootstrap
   padding-bottom: 100px;
   background-color: #d2d2d2;
   height: 100%;
+  opacity: 0.5;
 }
 
 #section-realisations h3 {
   color: #589935;
+}
+
+#section-realisations :first-child {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /******************************************************************************/
@@ -348,6 +374,11 @@ Surcharge des styles spécifiques à Bootstrap
 
 #section-experiences .container-lg {
   background-color: #fcfcfa;
+}
+
+#section-experiences :first-child {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /******************************************************************************/
