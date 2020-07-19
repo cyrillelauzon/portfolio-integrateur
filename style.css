@@ -156,10 +156,14 @@ a:hover {
 }
 
 .muted {
-  color: #625e5d;
+  color: #7c7978;
 }
 
 .underlined {
+  text-decoration: underline;
+}
+
+.underlined:hover {
   text-decoration: underline;
 }
 

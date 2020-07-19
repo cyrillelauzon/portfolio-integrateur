@@ -58,7 +58,7 @@ $shortSpeed : 0.5s;
 
 
  //Fonction utilitaire qui change l'image en arrière plan
- @mixin bgImage($url) {
+  @mixin bgImage($url) {
     background-image: url($url);
     background-repeat: no-repeat;
   //  background-attachment: fixed;

@@ -75,9 +75,12 @@ a{
 }
 
 .muted {
-    color : $mainTextColor;
+    color : $mutedTextColor;
 }
 
 .underlined {
     text-decoration: underline;
+    &:hover{
+        text-decoration: underline;
+    }
 }
