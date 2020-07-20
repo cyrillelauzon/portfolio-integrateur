@@ -142,6 +142,10 @@ a:hover {
   text-decoration: none;
 }
 
+#css-overrides .smallText {
+  font-size: 13px;
+}
+
 #css-overrides ul {
   list-style-type: none;
   padding-left: 0px;
@@ -149,6 +153,26 @@ a:hover {
 
 .ul-dash {
   list-style-type: "- " !important;
+  margin-left: 7px;
+}
+
+.ul-dash li {
+  margin-left: 10px;
+}
+
+.ul-sub-code-subsection {
+  list-style-type: "- " !important;
+  margin-left: 7px;
+  /*     margin-left: 7px;
+    border-left: 1px $mainTextColor solid;
+
+    li{
+        margin-left: 10px;
+    } */
+}
+
+.ul-sub-code-subsection li {
+  margin-left: 10px;
 }
 
 #css-overrides li {
@@ -201,6 +225,30 @@ Surcharge des styles spécifiques à Bootstrap
 
 #css-overrides .container-fluid {
   padding: 0px;
+}
+
+/******************************************************************************/
+/******************************* Boutons bootsrap
+/******************************************************************************/
+.card {
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #625e5d;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #625e5d;
+}
+
+.btn {
+  color: white !important;
+}
+
+.card-body {
+  background-color: #d2d2d2;
 }
 
 /******************************************************************************/
@@ -434,7 +482,7 @@ Surcharge des styles spécifiques à Bootstrap
 
 #section-experiences h4 {
   color: #589935;
-  font-weight: bo;
+  font-weight: bold;
 }
 
 #section-experiences p {

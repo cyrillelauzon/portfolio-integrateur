@@ -60,6 +60,11 @@ a{
     }
 }
 
+#css-overrides .smallText{
+    font-size: $mainTextSmall;
+}
+
+
 #css-overrides ul {
     list-style-type: none;
     padding-left: 0px;
@@ -67,6 +72,26 @@ a{
 
 .ul-dash {
     list-style-type:"- " !important;
+    margin-left: 7px;
+
+    li{
+        margin-left: 10px;
+    }
+}
+
+.ul-sub-code-subsection {
+    list-style-type:"- " !important;
+    margin-left: 7px;
+
+    li{
+        margin-left: 10px;
+    }
+    /*     margin-left: 7px;
+    border-left: 1px $mainTextColor solid;
+
+    li{
+        margin-left: 10px;
+    } */
 }
 
 #css-overrides li {

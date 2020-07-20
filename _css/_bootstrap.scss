@@ -42,5 +42,26 @@ Surcharge des styles spécifiques à Bootstrap
     padding: 0px;
 }
 
+/******************************************************************************/
+/******************************* Boutons bootsrap
+/******************************************************************************/
+.card{
+    border: none;
+}
 
+.btn-secondary{
+    background-color: $mainTextColor;
+    border: none;
 
+    &:hover{
+        background-color: $mainTextColor;
+    }
+}
+
+.btn{
+    color:white !important;
+}
+
+.card-body{
+    background-color: $grayBgColor;
+}

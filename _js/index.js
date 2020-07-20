@@ -23,15 +23,12 @@ window.onscroll = function () {
 
     //Effet de parallax pour image titre
     console.log("curY" + curY);
-    let offset = window.pageYOffset;
+    //let offset = window.pageYOffset;
     //let divBioPict = document.getElementById("section-bio-bg-pict");
     //divBioPict.style.backgroundPositionY = offset * 0.3 + "px";
 
-    
-
    
     //Animations section competence
-    //TODO refactoriser en fonction
     let divCompetences = document.getElementById("section-competences-contenu");
     let divMarge = document.getElementById("section-competences-code");
     
