@@ -61,6 +61,7 @@
 /************ Section Bio
 /*****************************************************************************/
 
+//Entete grise
 #section-bio-header {
     height: 200px;
     background-color: $grayBgColor;
@@ -68,7 +69,8 @@
     
 }
 
-#section-bio-header-content {
+//Contenu de l'entete: photo profil et liens
+#section-bio-profile {
     animation: 1s ease-out 0s 1 FadeInBio;
     position: relative;
     top: 125px;
@@ -79,12 +81,8 @@
     background-color: transparent !important; //TODO remove hack
 }
 
-.animer-bio-header-content {
-    top: 100px !important;
-    opacity: 0.4 !important;
-}
-
-#section-bio-header-text {
+//Entete court texte de présentation
+#section-bio-profile-text {
     transition: all 0.5s;
 
     @media (max-width: $md) {
@@ -93,7 +91,8 @@
     }
 }
 
-#section-bio-banner {
+//Image d'entete
+#section-bio-bg-pict {
     z-index: 1;
     height: 500px;
     @include bgImage('img/background.jpg');
@@ -104,6 +103,7 @@
 /************ Section Compétences
 /*****************************************************************************/
 
+//Conteneur avec arierre plan foncé
 #section-competences {
     background-color: $darkBgColor;
     height: 100%;
@@ -112,6 +112,7 @@
     
 }
 
+//Conteneur avec arriere plan pale
 #section-competences-code {
     background-color: $mediumDarkBgColor !important;
     transition: left 0.5s;
@@ -134,6 +135,7 @@
     }
 }
 
+//Conteneur où est affichée la marge avec no de lignes
 #section-competences-code-lines {
     background-color: $mediumDarkBgColor;
     width: 60px;
@@ -149,6 +151,7 @@
     }
 }
 
+//Contenu en tant que tel de la section competence 
 #section-competences-contenu {
     transition: all 0.5s !important;
     padding-top: 30px;
@@ -225,7 +228,7 @@
 
 #section-experiences {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
     background-color: $white;
     height: 100%;
 
@@ -239,6 +242,7 @@
 
     h4 {
         color: $green;
+        font-weight: bo;
     }
 
     p {

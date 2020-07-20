@@ -257,7 +257,7 @@ Surcharge des styles spécifiques à Bootstrap
   z-index: 2;
 }
 
-#section-bio-header-content {
+#section-bio-profile {
   -webkit-animation: 1s ease-out 0s 1 FadeInBio;
           animation: 1s ease-out 0s 1 FadeInBio;
   position: relative;
@@ -268,25 +268,20 @@ Surcharge des styles spécifiques à Bootstrap
   background-color: transparent !important;
 }
 
-.animer-bio-header-content {
-  top: 100px !important;
-  opacity: 0.4 !important;
-}
-
-#section-bio-header-text {
+#section-bio-profile-text {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 @media (max-width: 768px) {
-  #section-bio-header-text {
+  #section-bio-profile-text {
     background-color: whitesmoke;
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
 }
 
-#section-bio-banner {
+#section-bio-bg-pict {
   z-index: 1;
   height: 500px;
   background-image: url("img/background.jpg");
@@ -428,7 +423,7 @@ Surcharge des styles spécifiques à Bootstrap
 /*****************************************************************************/
 #section-experiences {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   background-color: #fcfcfa;
   height: 100%;
 }
@@ -439,6 +434,7 @@ Surcharge des styles spécifiques à Bootstrap
 
 #section-experiences h4 {
   color: #589935;
+  font-weight: bo;
 }
 
 #section-experiences p {

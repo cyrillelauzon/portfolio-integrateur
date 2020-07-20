@@ -18,12 +18,22 @@ function AfficherAnimations() {
 
 //Fade in sur scroll
 window.onscroll = function () {
+
+    let curY = window.scrollY;
+
+    //Effet de parallax pour image titre
+    console.log("curY" + curY);
+    let offset = window.pageYOffset;
+    //let divBioPict = document.getElementById("section-bio-bg-pict");
+    //divBioPict.style.backgroundPositionY = offset * 0.3 + "px";
+
+    
+
    
     //Animations section competence
     //TODO refactoriser en fonction
-    let curY = window.scrollY;
-    let divCompetences = document.querySelector("#section-competences-contenu");
-    let divMarge = document.querySelector("#section-competences-code");
+    let divCompetences = document.getElementById("section-competences-contenu");
+    let divMarge = document.getElementById("section-competences-code");
     
     if(curY > 400 && curY < divCompetences.offsetHeight + 200 ){
         divCompetences.classList.add("animerCompetences");
@@ -36,8 +46,8 @@ window.onscroll = function () {
     }
     
    // FadeInDiv("#section-competences", 0.6);
-    FadeInDiv("#section-realisations");
-    FadeInDiv("#section-experiences");
+    FadeInDiv("section-realisations");
+    FadeInDiv("section-experiences");
     
 };
 
@@ -49,7 +59,7 @@ window.onscroll = function () {
  * @returns ne fait rien si id est invalide
  */
 function FadeInDiv(idDiv, pctBase = 0){
-    let divSelect = document.querySelector(idDiv);
+    let divSelect = document.getElementById(idDiv);
     if(divSelect === undefined) return;
     
     let curY = window.scrollY;
