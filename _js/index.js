@@ -25,7 +25,7 @@ window.onscroll = function () {
     let divCompetences = document.querySelector("#section-competences-contenu");
     let divMarge = document.querySelector("#section-competences-code");
     
-    if(curY > 400){
+    if(curY > 400 && curY < divCompetences.offsetHeight + 200 ){
         divCompetences.classList.add("animerCompetences");
         divMarge.classList.add("animerMargeCompetences");
     }
@@ -44,7 +44,7 @@ window.onscroll = function () {
 
 /**
  * @description FadeInDiv permet de faire apparaitre un div progressivement sur scroll
- * @param {string} id Div à faire apparaître progressivement
+ * @param {string} idDiv à faire apparaître progressivement
  * @param {number} [pctBase=0] pourcentage d'opacité de départ
  * @returns ne fait rien si id est invalide
  */

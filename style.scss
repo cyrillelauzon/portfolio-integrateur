@@ -199,10 +199,14 @@
 #section-realisations {
    // transition: all 0.5s;
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 175px;
     background-color: $grayBgColor;
     height: 100%;
     opacity: 0.5;
+
+    ul{
+        color: $darkBgColor;
+    }
 
     h3 {
         color: $green;
@@ -225,8 +229,12 @@
     background-color: $white;
     height: 100%;
 
+    ul{
+        color: $darkBgColor;
+    }
+
     h3 {
-        color: $mainTextColor;
+        //color: $mainTextColor;
     }
 
     h4 {
@@ -234,7 +242,8 @@
     }
 
     p {
-        text-decoration: underline;
+       // text-decoration: underline;
+       color: $mainTextColor;
     }
 
     .container-lg {
