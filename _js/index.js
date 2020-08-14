@@ -22,7 +22,8 @@ window.onscroll = function () {
     let curY = window.scrollY;
 
     //Effet de parallax pour image titre
-    console.log("curY" + curY);
+    //TODO Compléter code effet de parallax
+    //console.log("curY" + curY);
     //let offset = window.pageYOffset;
     //let divBioPict = document.getElementById("section-bio-bg-pict");
     //divBioPict.style.backgroundPositionY = offset * 0.3 + "px";
@@ -30,9 +31,9 @@ window.onscroll = function () {
    
     //Animations section competence
     let divCompetences = document.getElementById("section-competences-contenu");
-    let divMarge = document.getElementById("section-competences-code");
+    let divMarge = document.getElementById("section-competences-textarea");
     
-    if(curY > 400 && curY < divCompetences.offsetHeight + 200 ){
+    if(curY > 400 && curY < divCompetences.offsetHeight + 300 ){
         divCompetences.classList.add("animerCompetences");
         divMarge.classList.add("animerMargeCompetences");
     }
@@ -45,7 +46,6 @@ window.onscroll = function () {
    // FadeInDiv("#section-competences", 0.6);
     FadeInDiv("section-realisations");
     FadeInDiv("section-experiences");
-    
 };
 
 
@@ -66,4 +66,16 @@ function FadeInDiv(idDiv, pctBase = 0){
         let pct = pctBase + (curY / maxY);
         divSelect.style.opacity = pct;
     }
+}
+
+/**
+ * @description RetourHautPage retour animé vers haut de la page
+ * NB nécessite JQuery
+ */
+function RetourHautPage(){
+    
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: "0px"
+    }, 800);
 }

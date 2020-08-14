@@ -71,7 +71,7 @@
 
 //Contenu de l'entete: photo profil et liens
 #section-bio-profile {
-    animation: 1s ease-out 0s 1 FadeInBio;
+    animation: 1s ease-in 0s 1 FadeInBio;
     position: relative;
     top: 125px;
     height: 200px;
@@ -83,10 +83,12 @@
 
 //Entete court texte de présentation
 #section-bio-profile-text {
-    transition: all 0.5s;
-
+    //transition: all 0.5s;
+    
     @media (max-width: $md) {
-        background-color: whitesmoke;
+        background-color: $grayBgColor;     
+    //    height: 100% !important;
+        opacity: 0.8;
         transition: background-color 0.5s;
     }
 }
@@ -94,7 +96,7 @@
 //Image d'entete
 #section-bio-bg-pict {
     z-index: 1;
-    height: 500px;
+    height: 550px;
     @include bgImage('img/background.jpg');
 }
 
@@ -109,13 +111,14 @@
     height: 100%;
     height: auto;
   // opacity: 0.75;
+  width: 100%;
     
 }
 
 //Conteneur avec arriere plan pale
-#section-competences-code {
+#section-competences-textarea {
     background-color: $mediumDarkBgColor !important;
-    transition: left 0.5s;
+    transition: left ease-in-out 0.5s;
     position: relative;
     left: 5%;
     width: 100%;
@@ -129,14 +132,14 @@
 }
 
 .animerMargeCompetences{
-    left: 8% !important;
+    left: 6% !important;
     @media (max-width: $lg) {
         Left: 0px !important;
     }
 }
 
 //Conteneur où est affichée la marge avec no de lignes
-#section-competences-code-lines {
+#section-competences-textarea-marge {
     background-color: $mediumDarkBgColor;
     width: 60px;
     height: 100%;
@@ -164,8 +167,7 @@
 
     @media (max-width: $lg) {
         width: 80%;
-        padding-left: 0px;
-        margin-left: 25px;
+        margin-left: 10px;
         flex-basis: unset;
     }
 
@@ -180,7 +182,7 @@
 }
 
 .animerCompetences{
-    margin-left: 5% !important;
+    margin-left: 8% !important;
     width: 80% !important;
 
     ul {

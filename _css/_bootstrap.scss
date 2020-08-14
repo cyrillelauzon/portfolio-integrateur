@@ -52,9 +52,11 @@ Surcharge des styles spécifiques à Bootstrap
 .btn-secondary{
     background-color: $mainTextColor;
     border: none;
+    transition: opacity ease-in-out 0.5s;
 
     &:hover{
         background-color: $mainTextColor;
+        transition: opacity ease-in-out 0.5s;
     }
 }
 
