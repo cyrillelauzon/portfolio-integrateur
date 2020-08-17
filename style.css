@@ -112,6 +112,7 @@ Définition de styles de textes
   font-size: 16px;
   color: #f78502;
   font-weight: normal;
+  text-decoration: underline;
 }
 
 /******************************************************************************/
@@ -161,22 +162,13 @@ a:hover {
 }
 
 .ul-sub-code-subsection {
-  list-style-type: circle !important;
-  margin-left: 7px;
+  margin-top: 5px;
   /*     margin-left: 7px;
     border-left: 1px $mainTextColor solid;
 
     li{
         margin-left: 10px;
     } */
-}
-
-.ul-sub-code-subsection li {
-  margin-left: 10px;
-}
-
-#css-overrides li {
-  margin-top: 10px;
 }
 
 .muted {
@@ -305,7 +297,6 @@ Surcharge des styles spécifiques à Bootstrap
 /*****************************************************************************/
 #section-bio-header {
   height: 200px;
-  background-color: #d2d2d2;
   z-index: 2;
 }
 
@@ -322,17 +313,19 @@ Surcharge des styles spécifiques à Bootstrap
 
 @media (max-width: 768px) {
   #section-bio-profile-text {
-    background-color: #d2d2d2;
+    padding-top: 10px;
+    padding-bottom: 10px;
     opacity: 0.8;
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
+    height: 600px;
+    background: -webkit-gradient(linear, left bottom, left top, from(#cadcf4), color-stop(41%, #cadcf4), to(rgba(202, 220, 244, 0)));
+    background: linear-gradient(0deg, #cadcf4 0%, #cadcf4 41%, rgba(202, 220, 244, 0) 100%);
   }
 }
 
 #section-bio-bg-pict {
   z-index: 1;
-  height: 550px;
-  background-image: url("img/background.jpg");
+  height: 600px;
+  background-image: url("img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, 540px;
@@ -357,6 +350,10 @@ Surcharge des styles spécifiques à Bootstrap
   width: 100%;
   height: 100%;
   height: auto;
+}
+
+#section-competences-textarea ul {
+  margin-top: 15px;
 }
 
 @media (max-width: 992px) {
@@ -497,15 +494,22 @@ Surcharge des styles spécifiques à Bootstrap
 /************ Footer
 /*****************************************************************************/
 #css-overrides footer {
-  padding-top: 30px;
   height: 400px;
-  background-image: url("img/background.jpg");
+  padding-top: 30px;
+  background-image: url("img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, 540px;
+  text-align: center;
 }
 
 #css-overrides footer .container-lg {
   background-color: transparent !important;
+}
+
+@media (max-width: 992px) {
+  #css-overrides footer {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

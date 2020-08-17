@@ -63,8 +63,8 @@
 
 //Entete grise
 #section-bio-header {
+    //display: none;
     height: 200px;
-    background-color: $grayBgColor;
     z-index: 2;
     
 }
@@ -86,18 +86,20 @@
     //transition: all 0.5s;
     
     @media (max-width: $md) {
-        background-color: $grayBgColor;     
-    //    height: 100% !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
         opacity: 0.8;
-        transition: background-color 0.5s;
+        height: 600px;  //une taille élevé, le dépassement est couvert par la section compétence
+        background: linear-gradient(0deg, rgba(202,220,244,1) 0%, rgba(202,220,244,1) 41%, rgba(202,220,244,0) 100%);
     }
 }
 
 //Image d'entete
 #section-bio-bg-pict {
     z-index: 1;
-    height: 550px;
-    @include bgImage('img/background.jpg');
+    height: 600px;
+    @include bgImage('img/background2.jpg');
+
 }
 
 
@@ -124,6 +126,10 @@
     width: 100%;
     height: 100%;
     height: auto;
+
+    ul{
+        margin-top: 15px;
+    }
 
     @media (max-width: $lg) {
         left: 0px;
@@ -268,13 +274,17 @@
 /*****************************************************************************/
 #css-overrides footer {
     //background-color: $grayBgColor;
+    height: 400px;
     padding-top: 30px;
 
     .container-lg {
         background-color: transparent !important; //TODO remove hack
     }
+    @include bgImage('img/background2.jpg');
 
-    height: 400px;
-    @include bgImage('img/background.jpg');
+    @media (max-width: $lg) {
+        text-align: center;
+    }
+    text-align: center;
 
 }

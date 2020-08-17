@@ -12,6 +12,11 @@ window.addEventListener("load", AfficherAnimations);
 
 function AfficherAnimations() {
   document.body.classList.remove('js-Page-Loading');
+  
+  //hack temp
+  let offset = window.pageYOffset;
+  let divBioPict = document.getElementById("section-bio-bg-pict");
+  divBioPict.style.backgroundPositionY = offset * 0.2 + "px";
 }
 
 
@@ -24,9 +29,11 @@ window.onscroll = function () {
     //Effet de parallax pour image titre
     //TODO Compléter code effet de parallax
     //console.log("curY" + curY);
-    //let offset = window.pageYOffset;
-    //let divBioPict = document.getElementById("section-bio-bg-pict");
-    //divBioPict.style.backgroundPositionY = offset * 0.3 + "px";
+    let offset = window.pageYOffset;
+    let divBioPict = document.getElementById("section-bio-bg-pict");
+    divBioPict.style.backgroundPositionY = offset * 0.2 + "px";
+    console.log(divBioPict.style.backgroundPositionY);
+
 
    
     //Animations section competence
