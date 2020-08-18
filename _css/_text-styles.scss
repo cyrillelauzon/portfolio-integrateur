@@ -35,7 +35,7 @@ Définition de styles de textes
     font-size: $mainTextSize;
     color: $mainSubTitleColor;
     font-weight: normal;
-    text-decoration: underline;
+    //text-decoration: underline;
 }
 
 
@@ -52,6 +52,7 @@ Définition de styles de textes
     color: $darkBgColor;
     font-weight: normal;
 }
+
 
 a{
     @include opacityFadeOnHover(0.7);
@@ -71,22 +72,20 @@ a{
     padding-left: 0px;
 }
 
-.ul-dash {
-    list-style-type:circle!important;
-    margin-left: 7px;
-
-    li{
-        margin-left: 10px;
-    }
+#css-overrides li {
+    margin-top: 15px;
 }
 
-.ul-sub-code-subsection {
+
+#css-overrides .ul-code-subsection {
+    //border-left: solid 1px $mutedTextColor;
     //list-style-type:circle !important;
-    //margin-left: 7px;
-    margin-top: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 
     li{
-      //  margin-left: 10px;
+        margin-left: 0px;
     }
     /*     margin-left: 7px;
     border-left: 1px $mainTextColor solid;
@@ -96,10 +95,17 @@ a{
     } */
 }
 
-#css-overrides li {
-    //margin-top: 10px;
 
+
+.ul-dash {
+    list-style-type:circle!important;
+    //margin-left: 7px;
+
+    li{
+        margin-left: 20px;
+    }
 }
+
 
 .muted {
     color : $mutedTextColor;

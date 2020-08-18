@@ -69,7 +69,7 @@ $shortSpeed : 0.5s;
 //Slidein de la section Bio
  @keyframes FadeInBio {
     0% {
-      transform: translateY(-10%);
+      transform: translateY(10%);
       opacity: 0;
     }
     100% {
