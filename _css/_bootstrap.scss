@@ -42,6 +42,26 @@ Surcharge des styles spécifiques à Bootstrap
     padding: 0px;
 }
 
+
+/******************************************************************************/
+/******************************* navbars
+/******************************************************************************/
+
+#css-overrides .navbar {
+    background-color: $bg-blue !important;
+}
+
+#css-overrides .navbar-brand  {
+    
+        font-family: $mainFontFamilly;
+        font-size: 18px;
+        color: $mainTitleColor;
+        font-weight: bold;
+    
+    
+}
+
+
 /******************************************************************************/
 /******************************* Boutons bootsrap
 /******************************************************************************/
@@ -65,5 +85,8 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 .card-body{
-    background-color: $grayBgColor;
+    background-color: $bg-blue;
 }
+
+
+

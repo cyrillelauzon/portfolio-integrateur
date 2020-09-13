@@ -1,11 +1,16 @@
 @charset "iso-8859-1";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 
 
 @import "_css/variables";
 @import "_css/animation";
 @import "_css/text-styles";
 @import "_css/bootstrap";
+
+
+@import "_css/_bio";
+
 
 
 /******************************************************************************/
@@ -18,9 +23,11 @@
 }
 
 .img-profile {
-    width: 200px;
+    width: 100px;
     height: auto;
     border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .thumbnails {
@@ -47,72 +54,26 @@
 #css-overrides {
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: white;
+ //   background-color: white;
     //@include quickFadeInAnimation();
 }
 
 #css-overrides .container-lg {
-    background-color: $grayBgColor;
+   // background-color: $grayBgColor;
 }
 
 
 
-/******************************************************************************/
-/************ Section Bio
-/*****************************************************************************/
 
-//Entete grise
-#section-bio-header {
-    //display: none;
-    height: 200px;
-    z-index: 2;
-
-}
-
-//Contenu de l'entete: photo profil et liens
-#section-bio-profile {
-    animation: 0.5s ease-in 0s 1 FadeInBio;
-    position: relative;
-    top: 125px;
-    height: 200px;
-    width: 100%;
-    opacity: 1;
-
-    background-color: transparent !important; //TODO remove hack
-}
-
-//Entete court texte de présentation
-#section-bio-profile-text {
-    //transition: all 0.5s;
-
-    @media (max-width: $md) {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        opacity: 0.8;
-        height: 600px; //une taille élevé, le dépassement est couvert par la section compétence
-        background: linear-gradient(0deg, rgba(202, 220, 244, 1) 0%, rgba(202, 220, 244, 1) 41%, rgba(202, 220, 244, 0) 100%);
-    }
-}
-
-//Tagline dans la section bio
-#css-overrides .bio-tagline{
-    font-size: 18px;
-    padding-top:14px;
-    color: $mainTitleColor;
-}
-
-//Image d'entete
-#section-bio-bg-pict {
-    z-index: 1;
-    height: 600px;
-    @include bgImage('img/background2.jpg');
-
-}
 
 
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/
+
+#section-comp{
+    background-color: $bg-blue;
+}
 
 //Conteneur avec arierre plan foncé
 #section-competences {
@@ -121,6 +82,12 @@
     height: auto;
     // opacity: 0.75;
     width: 100%;
+    position: relative;
+    //left: 25%;
+
+    h4{
+        color: $green;        
+    }
 
 }
 
@@ -222,7 +189,7 @@
     // transition: all 0.5s;
     padding-top: 30px;
     padding-bottom: 175px;
-    background-color: $grayBgColor;
+    background-color: $bg-blue;
     height: 100%;
     opacity: 0.5;
 
@@ -231,9 +198,14 @@
     }
 
     h3 {
-        color: $green;
+        color: $mainTextColor;
+    }
+
+    .container-lg {
+        background-color: $bg-blue !important;
     }
 }
+
 
 //Responsive, permet d'éviter changements de positions brutes lors
 //de redimensionnement de page
@@ -248,11 +220,11 @@
 #section-experiences {
     padding-top: 30px;
     padding-bottom: 100px;
-    background-color: $white;
+    background-color: $bg-peach;
     height: 100%;
 
-    ul {
-        color: $darkBgColor;
+    ul, li {
+        color: $mainTextColor;
     }
 
     h3 {
@@ -260,7 +232,7 @@
     }
 
     h4 {
-        color: $green;
+        color: $mainTextColor;
         font-weight: bold;
     }
 
@@ -270,9 +242,15 @@
     }
 
     .container-lg {
-        background-color: $white;
+        background-color: $bg-peach;
+    }
+    
+    .div-emploi {
+        padding: 10px;
+        border-left: 1px solid $mainTextColor;
     }
 }
+
 
 //Responsive, permet d'éviter changements de positions brutes lors
 //de redimensionnement de page
@@ -289,10 +267,10 @@
     padding-top: 30px;
 
     .container-lg {
-        background-color: transparent !important; //TODO remove hack
+        background-color: $bg-blue !important; //TODO remove hack
     }
-
-    @include bgImage('img/background2.jpg');
+    background-color: $bg-blue !important; //TODO remove hack
+    //@include bgImage('img/background2.jpg');
 
     @media (max-width: $lg) {
         text-align: center;

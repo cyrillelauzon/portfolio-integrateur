@@ -1,0 +1,49 @@
+
+/******************************************************************************/
+/************ Section Bio
+/*****************************************************************************/
+
+#section-bio{
+    background-color: $bg-blue;
+}
+.text-bio{
+    width: 40%;
+    //margin-left: auto;
+}
+
+#bio-header {
+    margin-top: 100px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    //border-bottom: 2px solid $line-accent;
+    background-color: $bg-peach !important;
+    box-shadow: 7px 11px 3px 0px rgba(181,177,181,1);
+}
+
+#bio-tagline {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    //border-bottom: 2px solid $line-accent;
+
+    p{
+        font-family: $mainFontFamilly;
+        font-size: 18px;
+        color: $mainTextColor;
+        font-weight: normal;
+    }
+}
+
+
+
+//Contenu de l'entete: photo profil et liens
+#section-bio-profile {
+    animation: 0.5s ease-in 0s 1 FadeInBio;
+   
+    height: 700px;
+    width: 100%;
+    opacity: 1;
+
+    background-color: $bg-blue !important;
+}
+
+

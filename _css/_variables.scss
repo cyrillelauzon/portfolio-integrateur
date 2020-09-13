@@ -20,7 +20,7 @@ $mainTextSmall: 13px;
 
 //Couleurs 
 $mainTitleColor : rgb(98, 94, 93);
-$mainSubTitleColor : rgb(247, 133, 2);
+$mainSubTitleColor : rgb(98, 94, 93);
 $mainTextColor : rgb(98, 94, 93);
 $mutedTextColor : rgb(124, 121, 120);
 $highlightTextColor : rgb(252,252,250);
@@ -34,6 +34,14 @@ $green : rgb(88, 153, 53);
 $red: rgb(255, 66, 95);
 $yellow: rgb(247, 133, 2);
 $white: rgb(252,252,250);
+
+//background-colors
+$bg-peach: rgb(246,239,231);
+$bg-blue: rgb(213, 221,223);
+
+
+//accentcolors
+$line-accent: #625e5d82;
 
 //Classes raccourcis
 #css-overrides .red {

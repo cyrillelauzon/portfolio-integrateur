@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 /*****************************************************************************
 Variables.scss
 
@@ -99,7 +100,7 @@ Définition de styles de textes
 #css-overrides h3 {
   font-family: "Roboto Condensed";
   font-size: 24px;
-  color: #f78502;
+  color: #625e5d;
   font-weight: normal;
 }
 
@@ -110,7 +111,7 @@ Définition de styles de textes
 
 #css-overrides h4 {
   font-size: 16px;
-  color: #f78502;
+  color: #625e5d;
   font-weight: normal;
 }
 
@@ -228,6 +229,20 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 /******************************************************************************/
+/******************************* navbars
+/******************************************************************************/
+#css-overrides .navbar {
+  background-color: #d5dddf !important;
+}
+
+#css-overrides .navbar-brand {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  color: #625e5d;
+  font-weight: bold;
+}
+
+/******************************************************************************/
 /******************************* Boutons bootsrap
 /******************************************************************************/
 .card {
@@ -252,7 +267,48 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 .card-body {
-  background-color: #d2d2d2;
+  background-color: #d5dddf;
+}
+
+/******************************************************************************/
+/************ Section Bio
+/*****************************************************************************/
+#section-bio {
+  background-color: #d5dddf;
+}
+
+.text-bio {
+  width: 40%;
+}
+
+#bio-header {
+  margin-top: 100px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  background-color: #f6efe7 !important;
+  -webkit-box-shadow: 7px 11px 3px 0px #b5b1b5;
+          box-shadow: 7px 11px 3px 0px #b5b1b5;
+}
+
+#bio-tagline {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#bio-tagline p {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  color: #625e5d;
+  font-weight: normal;
+}
+
+#section-bio-profile {
+  -webkit-animation: 0.5s ease-in 0s 1 FadeInBio;
+          animation: 0.5s ease-in 0s 1 FadeInBio;
+  height: 700px;
+  width: 100%;
+  opacity: 1;
+  background-color: #d5dddf !important;
 }
 
 /******************************************************************************/
@@ -264,9 +320,11 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 .img-profile {
-  width: 200px;
+  width: 100px;
   height: auto;
   border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .thumbnails {
@@ -293,66 +351,25 @@ Surcharge des styles spécifiques à Bootstrap
 #css-overrides {
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: white;
-}
-
-#css-overrides .container-lg {
-  background-color: #d2d2d2;
-}
-
-/******************************************************************************/
-/************ Section Bio
-/*****************************************************************************/
-#section-bio-header {
-  height: 200px;
-  z-index: 2;
-}
-
-#section-bio-profile {
-  -webkit-animation: 0.5s ease-in 0s 1 FadeInBio;
-          animation: 0.5s ease-in 0s 1 FadeInBio;
-  position: relative;
-  top: 125px;
-  height: 200px;
-  width: 100%;
-  opacity: 1;
-  background-color: transparent !important;
-}
-
-@media (max-width: 768px) {
-  #section-bio-profile-text {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    opacity: 0.8;
-    height: 600px;
-    background: -webkit-gradient(linear, left bottom, left top, from(#cadcf4), color-stop(41%, #cadcf4), to(rgba(202, 220, 244, 0)));
-    background: linear-gradient(0deg, #cadcf4 0%, #cadcf4 41%, rgba(202, 220, 244, 0) 100%);
-  }
-}
-
-#css-overrides .bio-tagline {
-  font-size: 18px;
-  padding-top: 14px;
-  color: #625e5d;
-}
-
-#section-bio-bg-pict {
-  z-index: 1;
-  height: 600px;
-  background-image: url("img/background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center, 540px;
 }
 
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/
+#section-comp {
+  background-color: #d5dddf;
+}
+
 #section-competences {
   background-color: #231f22;
   height: 100%;
   height: auto;
   width: 100%;
+  position: relative;
+}
+
+#section-competences h4 {
+  color: #589935;
 }
 
 #section-competences-textarea {
@@ -468,7 +485,7 @@ Surcharge des styles spécifiques à Bootstrap
 #section-realisations {
   padding-top: 30px;
   padding-bottom: 175px;
-  background-color: #d2d2d2;
+  background-color: #d5dddf;
   height: 100%;
   opacity: 0.5;
 }
@@ -478,7 +495,11 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 #section-realisations h3 {
-  color: #589935;
+  color: #625e5d;
+}
+
+#section-realisations .container-lg {
+  background-color: #d5dddf !important;
 }
 
 /******************************************************************************/
@@ -487,16 +508,16 @@ Surcharge des styles spécifiques à Bootstrap
 #section-experiences {
   padding-top: 30px;
   padding-bottom: 100px;
-  background-color: #fcfcfa;
+  background-color: #f6efe7;
   height: 100%;
 }
 
-#section-experiences ul {
-  color: #231f22;
+#section-experiences ul, #section-experiences li {
+  color: #625e5d;
 }
 
 #section-experiences h4 {
-  color: #589935;
+  color: #625e5d;
   font-weight: bold;
 }
 
@@ -505,7 +526,12 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 #section-experiences .container-lg {
-  background-color: #fcfcfa;
+  background-color: #f6efe7;
+}
+
+#section-experiences .div-emploi {
+  padding: 10px;
+  border-left: 1px solid #625e5d;
 }
 
 /******************************************************************************/
@@ -514,15 +540,12 @@ Surcharge des styles spécifiques à Bootstrap
 #css-overrides footer {
   height: 400px;
   padding-top: 30px;
-  background-image: url("img/background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center, 540px;
+  background-color: #d5dddf !important;
   text-align: center;
 }
 
 #css-overrides footer .container-lg {
-  background-color: transparent !important;
+  background-color: #d5dddf !important;
 }
 
 @media (max-width: 992px) {
