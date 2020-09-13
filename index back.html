@@ -42,7 +42,7 @@
           <div class="col-md-3"></div>
           <div class="col-md-6 text-center">
 
-            <div class="col-md-12 bio-header">
+            <div id="bio-header" class="col-md-12">
 
               <div class="row">
                 <div class="col-md-4 align-middle">
@@ -70,9 +70,11 @@
 
                 </div>
               </div>
+
+              <!-- <img class="img-profile" src="img/profile-pic.jpg" alt="Photo de profil" />  -->
             </div>
 
-            <div class="float-text">
+            <div id="bio-tagline">
               <p class="text-center">Intérêt marqué pour le web et les interfaces graphiques</p>
               <p class="text-center">Grande expérience en réalisation de projets artistiques (solo et en équipe),
                 très
@@ -89,101 +91,149 @@
 
 
     <!-- Section Compétences -->
-    <section id="section-competences">
-      <div class="container-lg">
-        <h2>Compétences</h2>
+    <section id="section-comp">
+      <div id="section-competences">
+        <div id="section-competences-textarea">
+          <div class="row ">
+            <div id="section-competences-textarea-marge">
+              <p>
+                200 201 202 203 204 <span class="green">205</span> 206 207 208 209 210 211 212 213 214 215
+                216 217 218 219 220 221 222 223
+              </p>
+            </div>
 
-        <div class="row">
-          <div class="col-md-9">
-
-            <div class="float-box-code">
+            <div id="section-competences-contenu" class="col-md-10">
               <div class="row">
+                <div class="col-sm-8">
+                  <h3 class="red">Compétences</h3>
 
-                <!-- Section programmation -->
-                <div class="col-sm-12">
-                  <h3>Programmation</h3>
-                  <ul>
-                    <li>Html5</li>
-                    <li>Css3 <span class="muted">- Sass, sites responsives avec Bootstrap 4, animations css</span></li>
-                    <li>JavaScript <span class="muted">- Structures de données, JSON, tests unitaires avec Jest, Programmation asynchrone </span></li>
-                    <li>Programmation orientée objet <span class="muted">- Notions de C++ et de PHP </span></li>
-                  </ul>
-                  </br>
-                </div>
-                <!-- Sous-colonne b -->
-                <div class="col-sm-12">
-                  <h3>Environnements</h3>
-                  <ul>
-                    <li>Wordpress <span class="muted">- Programmation de thèmes, personnalisation de composantes Wordpress existantes, intégration de contenu, hébergement </span></li>
-                    <li>VS-Code <span class="muted">- Excellentes connaissences de l'environnement et outils de déboguage </span></li>
-                    <li>Git <span class="muted">- Branches, commit, issues et pull requests </span></li>
-                    <li>Npm</li>
-                    <li>Linux (Ubuntu)</li>
-                  </ul>
                   <br />
                 </div>
-                <div class="col-sm-12">
-                  <h3>Logiciels</h3>
-                  <ul>
-                    <li>Adobe XD</li>
-                    <li>Photoshop</li>
-                    <li>Indesign</li>
-                    <li>Illustrator</li>
-                  </ul>
-                  <br />
+              </div>
+
+              <div class="row">
+                <!-- Groupe Colonne 1 -->
+                <div class="col-lg-4">
+                  <div class="row">
+                    <!-- Sous-colonne a -->
+                    <div class="col-md-8">
+                      <h4>Formation</h4>
+                      <ul>
+                        <li>Maîtrise arts visuels et médiatiques
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Université du Québec à
+                              Montréal<br />(2020)</li>
+                          </ul>
+                        </li>
+
+                        <li>Certificat en informatique appliquée
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Université de
+                              Montréal<br />(2015)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <br />
+
+                      <h4>Langues</h4>
+                      <ul>
+                        <li class="muted">Maîtrise de la langue française</li>
+                        <li class="muted">Anglais parlé et écrit</li>
+                      </ul>
+                      <br />
+
+                    </div>
+                  </div>
                 </div>
 
+                <!-- Groupe Colonne 2 -->
+                <div class="col-lg-6  ">
+                  <div class="row">
+
+                    <!-- Sous-colonne a -->
+                    <div class="col-sm-4">
+                      <h4>Programmation</h4>
+                      <ul>
+                        <li>Html5</li>
+                        <li>Css3
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Sass</li>
+                            <li class="muted">Sites responsives</li>
+                            <li class="muted">Animations Css</li>
+                          </ul>
+                        </li>
+                        <li>JavaScript
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Structures de données</li>
+                            <li class="muted">JSON</li>
+                            <li class="muted">Jest</li>
+                            <li class="muted">Programmation asynchrone</li>
+                          </ul>
+                        </li>
+                        <li>Bootstrap 4</li>
+                        <li>Programmation orientée objet
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Notions de C++ et de PHP</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      </br>
+                    </div>
+                    <!-- Sous-colonne b -->
+                    <div class="col-sm-4">
+                      <h4>Environnements</h4>
+                      <ul>
+                        <li>Wordpress
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Programmation de thèmes</li>
+                            <li class="muted">Personnalisation d'éléments Wordpress existants</li>
+                            <li class="muted">Intégration du contenu</li>
+                          </ul>
+                        </li>
+                        <li>VS-Code
+                          <ul class="ul-code-subsection">
+                            <li class="muted">Environnement et outils de déboguage</li>
+                          </ul>
+                        </li>
+
+                        <li>Git</li>
+                        <li>Npm</li>
+                        <li>Linux (Ubuntu)</li>
+                        <li>Mailchimp</li>
+                      </ul>
+                      <br />
+                    </div>
+                    <!-- Sous-colonne c -->
+                    <div class="col-md-4">
+                      <h4>Logiciels</h4>
+                      <ul>
+                        <li>Adobe XD</li>
+                        <li>Photoshop</li>
+                        <li>Indesign</li>
+                        <li>Illustrator</li>
+                      </ul>
+                      <br />
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-          </div>
-          <div class="col-md-3">
- 
-            <div class="float-box">
-              <h3>Formation</h3>
-                <ul>
-                  <li>Maîtrise arts visuels et médiatiques
-                    <ul class="ul-code-subsection">
-                      <li class="muted">Université du Québec à
-                        Montréal<br />(2020)</li>
-                    </ul>
-                  </li>
-
-                  <li>Certificat en informatique appliquée
-                    <ul class="ul-code-subsection">
-                      <li class="muted">Université de
-                        Montréal<br />(2015)</li>
-                    </ul>
-                  </li>
-                </ul>
-                <br />
-
-                <h3>Langues</h3>
-                <ul>
-                  <li class="muted">Maîtrise de la langue française</li>
-                  <li class="muted">Anglais parlé et écrit</li>
-                  <li class="muted">Espagnol parlé</li>
-                </ul>
-                <br />
-            </div>
-
-
-
           </div>
         </div>
       </div>
     </section>
-
-
-
-
     <!-- Section Réalisations -->
+
+
     <section>
       <div id="section-realisations">
         <div class="container-lg">
           <div class="row">
             <div class="col-lg-8">
-              <h2>Réalisation d'un thème Wordpress</h2>
+              <h3>Réalisation d'un thème Wordpress</h3>
+              <br />
+              <br />
             </div>
           </div>
           <div class="row">
@@ -233,7 +283,7 @@
         <div class="container-lg">
           <div class="row">
             <div class="col-lg-8">
-              <h2>Expériences de travail</h2>
+              <h3>Expériences de travail</h3>
               <br />
 
               <div class='div-emploi'>

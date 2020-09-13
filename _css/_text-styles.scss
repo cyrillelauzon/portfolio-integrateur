@@ -25,11 +25,12 @@ Définition de styles de textes
     color: $mainSubTitleColor;
     
     font-weight: normal;
+    margin-bottom: $elementStdMargin;
 }
 
 #css-overrides h3 {
     font-size: $mainSectionTitleSize;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 #css-overrides h4 {
@@ -45,15 +46,21 @@ Définition de styles de textes
 /************ Style de textes
 /*****************************************************************************/
 
+#css-overrides p{
+    font-family: $mainFontFamilly;
+    font-size: $mainTextSize;
+    color: $mainTextColor;
+    font-weight: normal;
+}
+
 #css-overrides p,
 #css-overrides ul,
 #css-overrides a {
     font-family: $mainFontFamilly;
-    font-size: $mainTextSize;
-    color: $darkBgColor;
+//  font-size: $mainTextSize;
+ //0   color: $darkBgColor;
     font-weight: normal;
 }
-
 
 a{
     @include opacityFadeOnHover(0.7);
@@ -109,7 +116,7 @@ a{
 
 
 .muted {
-    color : $mutedTextColor;
+    color : $codeMutedTextColor;
 }
 
 .underlined {

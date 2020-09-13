@@ -56,26 +56,18 @@ Helpers gestion des animations CSS
 
 @-webkit-keyframes FadeInBio {
   0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes FadeInBio {
   0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -102,15 +94,16 @@ Définition de styles de textes
   font-size: 24px;
   color: #625e5d;
   font-weight: normal;
+  margin-bottom: 30px;
 }
 
 #css-overrides h3 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 #css-overrides h4 {
-  font-size: 16px;
+  font-size: 18px;
   color: #625e5d;
   font-weight: normal;
 }
@@ -118,12 +111,17 @@ Définition de styles de textes
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
+#css-overrides p {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  color: #625e5d;
+  font-weight: normal;
+}
+
 #css-overrides p,
 #css-overrides ul,
 #css-overrides a {
   font-family: "Roboto Condensed";
-  font-size: 16px;
-  color: #231f22;
   font-weight: normal;
 }
 
@@ -243,72 +241,14 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 /******************************************************************************/
-/******************************* Boutons bootsrap
+/******************************* Éléments graphiques de page
 /******************************************************************************/
-.card {
-  border: none;
+section {
+  padding-bottom: 100px;
 }
 
-.btn-secondary {
-  background-color: #625e5d;
-  border: none;
-  -webkit-transition: opacity ease-in-out 0.5s;
-  transition: opacity ease-in-out 0.5s;
-}
-
-.btn-secondary:hover {
-  background-color: #625e5d;
-  -webkit-transition: opacity ease-in-out 0.5s;
-  transition: opacity ease-in-out 0.5s;
-}
-
-.btn {
-  color: white !important;
-}
-
-.card-body {
-  background-color: #d5dddf;
-}
-
-/******************************************************************************/
-/************ Section Bio
-/*****************************************************************************/
-#section-bio {
-  background-color: #d5dddf;
-}
-
-.text-bio {
-  width: 40%;
-}
-
-#bio-header {
-  margin-top: 100px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  background-color: #f6efe7 !important;
-  -webkit-box-shadow: 7px 11px 3px 0px #b5b1b5;
-          box-shadow: 7px 11px 3px 0px #b5b1b5;
-}
-
-#bio-tagline {
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-}
-
-#bio-tagline p {
-  font-family: "Roboto Condensed";
-  font-size: 18px;
-  color: #625e5d;
-  font-weight: normal;
-}
-
-#section-bio-profile {
-  -webkit-animation: 0.5s ease-in 0s 1 FadeInBio;
-          animation: 0.5s ease-in 0s 1 FadeInBio;
-  height: 700px;
-  width: 100%;
-  opacity: 1;
-  background-color: #d5dddf !important;
+.section-spacer {
+  height: 100px;
 }
 
 /******************************************************************************/
@@ -346,6 +286,113 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 /******************************************************************************/
+/******************************* Boites Flottantes
+/******************************************************************************/
+#css-overrides .float-text, #css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+#css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
+  background-color: #f6efe7;
+  -webkit-box-shadow: 7px 11px 3px 0px #b5b1b5;
+          box-shadow: 7px 11px 3px 0px #b5b1b5;
+}
+
+#css-overrides .float-box h3, #css-overrides .float-box-code h3, #css-overrides .bio-header h3 {
+  border-bottom: 2px solid #625e5d82;
+}
+
+#css-overrides .float-box-code {
+  background-color: #2e2a2e;
+}
+
+#css-overrides .float-box-code h3 {
+  color: #589935;
+}
+
+#css-overrides .float-box-code li {
+  color: #fcfcfa;
+}
+
+#css-overrides .float-box-code .muted {
+  color: #7c7978;
+}
+
+/******************************************************************************/
+/******************************* Boutons bootsrap
+/******************************************************************************/
+.card {
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #625e5d;
+  border: none;
+  -webkit-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.btn-secondary:hover {
+  background-color: #625e5d;
+  -webkit-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.btn {
+  color: white !important;
+}
+
+.card-body {
+  background-color: #d5dddf;
+}
+
+/******************************************************************************/
+/************ Section Bio
+/*****************************************************************************/
+#section-bio {
+  background-color: #d5dddf;
+}
+
+#section-bio-profile {
+  -webkit-animation: 0.5s ease-in 0s 1 FadeInBio;
+          animation: 0.5s ease-in 0s 1 FadeInBio;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: #d5dddf !important;
+}
+
+.text-bio {
+  width: 40%;
+}
+
+.bio-header {
+  margin-top: 100px;
+  padding-bottom: 30px;
+}
+
+#bio-tagline {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#bio-tagline p {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  color: #625e5d;
+  font-weight: normal;
+}
+
+/******************************************************************************/
+/************ Section Compétences
+/*****************************************************************************/
+#section-competences {
+  height: 100%;
+  background-color: #d5dddf;
+}
+
+/******************************************************************************/
 /************ Corps de la page
 /*****************************************************************************/
 #css-overrides {
@@ -356,22 +403,6 @@ Surcharge des styles spécifiques à Bootstrap
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/
-#section-comp {
-  background-color: #d5dddf;
-}
-
-#section-competences {
-  background-color: #231f22;
-  height: 100%;
-  height: auto;
-  width: 100%;
-  position: relative;
-}
-
-#section-competences h4 {
-  color: #589935;
-}
-
 #section-competences-textarea {
   background-color: #2e2a2e !important;
   -webkit-transition: left ease-in-out 0.5s;
@@ -455,7 +486,6 @@ Surcharge des styles spécifiques à Bootstrap
 
 #section-competences-contenu ul {
   opacity: 0.7;
-  color: #fcfcfa;
 }
 
 .animerCompetences {
@@ -487,7 +517,7 @@ Surcharge des styles spécifiques à Bootstrap
   padding-bottom: 175px;
   background-color: #d5dddf;
   height: 100%;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 #section-realisations ul {

@@ -6,18 +6,30 @@
 #section-bio{
     background-color: $bg-blue;
 }
+
+//Contenu de l'entete: photo profil et liens
+#section-bio-profile {
+    animation: 0.5s ease-in 0s 1 FadeInBio;
+   
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+
+    background-color: $bg-blue !important;
+}
+
+
 .text-bio{
     width: 40%;
     //margin-left: auto;
 }
 
-#bio-header {
+.bio-header {
+    @extend .float-box;
     margin-top: 100px;
     padding-bottom: 30px;
-    margin-bottom: 30px;
-    //border-bottom: 2px solid $line-accent;
-    background-color: $bg-peach !important;
-    box-shadow: 7px 11px 3px 0px rgba(181,177,181,1);
+
+    //border-bottom: 2px solid $line-accent;    
 }
 
 #bio-tagline {
@@ -35,15 +47,5 @@
 
 
 
-//Contenu de l'entete: photo profil et liens
-#section-bio-profile {
-    animation: 0.5s ease-in 0s 1 FadeInBio;
-   
-    height: 700px;
-    width: 100%;
-    opacity: 1;
-
-    background-color: $bg-blue !important;
-}
 
 

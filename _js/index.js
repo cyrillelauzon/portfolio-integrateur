@@ -37,7 +37,7 @@ window.onscroll = function () {
 
    
     //Animations section competence
-    let divCompetences = document.getElementById("section-competences-contenu");
+    /*let divCompetences = document.getElementById("section-competences-contenu");
     let divMarge = document.getElementById("section-competences-textarea");
     
     if(curY > 400 && curY < divCompetences.offsetHeight + 300 ){
@@ -48,11 +48,11 @@ window.onscroll = function () {
     {
         divCompetences.classList.remove("animerCompetences");
         divMarge.classList.remove("animerMargeCompetences");
-    }
+    }*/
     
    // FadeInDiv("#section-competences", 0.6);
-    FadeInDiv("section-realisations");
-    FadeInDiv("section-experiences");
+    //FadeInDiv("section-realisations");
+    //FadeInDiv("section-experiences");
 };
 
 
