@@ -9,24 +9,15 @@ Variables permettant de centraliser/personnaliser l'aspect visuel du site
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
 
-//H1
+
 $mainFontFamilly : "Roboto Condensed";
-$mainTitleSize : 36px;
-$mainSubTitleSize : 24px;
-$mainSectionTitleSize : 20px;
-$mainTextSize: 18px;
-$mainTextSmall: 13px;
-
-//margins
-$elementStdMargin: 30px;
-
-
-
-//NEW--------------------------------------------------------
 
 //Taille
-$size-title-blog: 36px;
-$size-title-section: 30px;
+$size-h1title: 36px; 
+$size-h2subtitle: 30px; 
+$size-h3block: 20px; 
+$mainTextSize: 18px;
+$mainTextSmall: 13px;
 
 //Couleurs principales
 $mainTitleColor : rgb(98, 94, 93);
@@ -46,38 +37,17 @@ $bg-gray:  rgb(46, 42, 46);
 //accentcolors
 $line-accent: #625e5d82;
 
-//OLD--------------------------------------------------------
+
+//Marges
+$elementStdMargin: 30px;
+
+
 //Couleurs 
-
-
-
-
-$grayBgColor: rgb(210, 210, 210);
-$blueBgColor: #cadcf4;
-$mediumDarkBgColor: rgb(46, 42, 46);
-$darkBgColor: rgb(35,31,34);
-
 $green : rgb(88, 153, 53);
 $red: rgb(255, 66, 95);
 $yellow: rgb(247, 133, 2);
 $white: rgb(252,252,250);
 
-
-
-
-
-//Classes raccourcis
-#css-overrides .red {
-    color: $red;
-}
-
-#css-overrides .yellow {
-    color: $yellow;
-}
-
-#css-overrides .green {
-    color: $green;
-}
 
 /******************************************************************************/
 /******************************* Media breakpoints*****************************/

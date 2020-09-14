@@ -9,18 +9,6 @@ Variables permettant de centraliser/personnaliser l'aspect visuel du site
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
-#css-overrides .red {
-  color: #ff425f;
-}
-
-#css-overrides .yellow {
-  color: #f78502;
-}
-
-#css-overrides .green {
-  color: #589935;
-}
-
 /******************************************************************************/
 /******************************* Media breakpoints*****************************/
 /******************************************************************************/
@@ -81,28 +69,29 @@ Définition de styles de textes
 /******************************************************************************/
 /************ Styles de titres
 /******************************************************************************/
-#css-overrides h1, #css-overrides h2, #css-overrides h3 {
+#css-overrides h1, #css-overrides h2, #css-overrides h3, #css-overrides h4 {
   font-family: "Roboto Condensed";
   font-size: 36px;
   color: #625e5d;
   font-weight: bold;
 }
 
-#css-overrides h2, #css-overrides h3 {
+#css-overrides h2, #css-overrides h3, #css-overrides h4 {
   font-size: 30px;
   color: #625e5d;
+  text-align: center;
+  margin-bottom: 30px;
   font-weight: normal;
 }
 
-#css-overrides h3 {
+#css-overrides h3, #css-overrides h4 {
+  text-align: left;
+  margin-bottom: .5rem;
   font-size: 20px;
-  font-weight: normal;
 }
 
 #css-overrides h4 {
   font-size: 18px;
-  color: #625e5d;
-  font-weight: normal;
 }
 
 /******************************************************************************/
@@ -115,7 +104,25 @@ Définition de styles de textes
   font-weight: normal;
 }
 
-#css-overrides p,
+#css-overrides .smallText {
+  font-size: 13px;
+}
+
+#css-overrides .muted {
+  color: #a09997 !important;
+}
+
+#css-overrides .underlined {
+  text-decoration: underline;
+}
+
+#css-overrides .underlined:hover {
+  text-decoration: underline;
+}
+
+/******************************************************************************/
+/************ Liens
+/*****************************************************************************/
 #css-overrides ul,
 #css-overrides a {
   font-family: "Roboto Condensed";
@@ -138,10 +145,9 @@ a:hover {
   text-decoration: none;
 }
 
-#css-overrides .smallText {
-  font-size: 13px;
-}
-
+/******************************************************************************/
+/************ Listes
+/*****************************************************************************/
 #css-overrides ul {
   list-style-type: none;
   padding-left: 0px;
@@ -175,22 +181,10 @@ a:hover {
   margin-left: 20px;
 }
 
-#css-overrides li .muted {
-  color: #a09997 !important;
-}
-
-#css-overrides .underlined {
-  text-decoration: underline;
-}
-
-#css-overrides .underlined:hover {
-  text-decoration: underline;
-}
-
 /*****************************************************************************
 bootstrap.scss
 
-Surcharge des styles spécifiques à Bootstrap
+Surcharges des styles spécifiques à Bootstrap
 /******************************************************************************/
 /******************************************************************************/
 /******************************* Bootstrap container/
@@ -238,13 +232,49 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 /******************************************************************************/
-/******************************* Éléments graphiques de page
+/******************************* Boutons bootsrap
 /******************************************************************************/
-section {
-  padding-bottom: 100px;
+.card {
+  border: none;
 }
 
+.btn-secondary {
+  background-color: #625e5d;
+  border: none;
+  -webkit-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.btn-secondary:hover {
+  background-color: #625e5d;
+  -webkit-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.btn {
+  color: white !important;
+}
+
+.card-body {
+  background-color: #d5dddf;
+}
+
+/*****************************************************************************
+components.scss
+
+Définitions de composantes graphiques réutilisables
+/******************************************************************************/
+/******************************************************************************/
+/******************************* Éléments graphiques de page
+/******************************************************************************/
+/* section {
+//    padding-bottom: 100px;
+} */
 .section-spacer {
+  height: 250px;
+}
+
+.section-spacer-small {
   height: 100px;
 }
 
@@ -285,26 +315,31 @@ section {
 /******************************************************************************/
 /******************************* Boites Flottantes
 /******************************************************************************/
-#css-overrides .float-text, #css-overrides .float-text-quote, #css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
+#css-overrides .float-text, #css-overrides .float-text-frame, #css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
   padding: 15px;
   margin-bottom: 30px;
 }
 
-#css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
+#css-overrides .float-text li, #css-overrides .float-text-frame li, #css-overrides .float-box li, #css-overrides .float-box-code li, #css-overrides .bio-header li {
+  color: #625e5d;
+}
+
+#css-overrides .float-text-frame {
+  border-bottom: 2px solid #625e5d82;
+  border-top: 2px solid #625e5d82;
+}
+
+#css-overrides .float-box, #css-overrides .float-box-code {
   background-color: #f6efe7;
   -webkit-box-shadow: 7px 11px 3px 0px #b5b1b5;
           box-shadow: 7px 11px 3px 0px #b5b1b5;
-}
-
-#css-overrides .float-box li, #css-overrides .float-box-code li, #css-overrides .bio-header li {
-  color: #625e5d;
 }
 
 #css-overrides .float-box-code {
   background-color: #2e2a2e;
 }
 
-#css-overrides .float-box-code h3 {
+#css-overrides .float-box-code h3, #css-overrides .float-box-code h4 {
   color: #589935;
 }
 
@@ -321,33 +356,17 @@ section {
 }
 
 /******************************************************************************/
-/******************************* Boutons bootsrap
-/******************************************************************************/
-.card {
-  border: none;
+/************ Corps de la page
+/*****************************************************************************/
+#css-overrides {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.btn-secondary {
-  background-color: #625e5d;
-  border: none;
-  -webkit-transition: opacity ease-in-out 0.5s;
-  transition: opacity ease-in-out 0.5s;
+/* #css-overrides .container-lg {
+   // background-color: $grayBgColor;
 }
-
-.btn-secondary:hover {
-  background-color: #625e5d;
-  -webkit-transition: opacity ease-in-out 0.5s;
-  transition: opacity ease-in-out 0.5s;
-}
-
-.btn {
-  color: white !important;
-}
-
-.card-body {
-  background-color: #d5dddf;
-}
-
+ */
 /******************************************************************************/
 /************ Section Bio
 /*****************************************************************************/
@@ -370,149 +389,111 @@ section {
 .bio-header {
   margin-top: 100px;
   padding-bottom: 30px;
-  background-color: #d5dddf !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
-/* #bio-tagline {
-    padding-bottom: 30px;
-    margin-bottom: 200px !important;
-    //border-bottom: 2px solid $line-accent;
-
-    background-color: $bg-blue !important;
-    p{
-        font-family: $mainFontFamilly;
-        font-size: 18px;
-        color: $mainTextColor;
-        font-weight: normal;
-    }
-} */
 /******************************************************************************/
-/************ Section Compétences
+/************ Section Compétences V2
 /*****************************************************************************/
 #section-competences {
   height: 100%;
   background-color: #d5dddf;
 }
 
-/******************************************************************************/
-/************ Corps de la page
-/*****************************************************************************/
-#css-overrides {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
+/* #competences-formation{
+    //@include float-box;
+} */
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/
-#section-competences-textarea {
-  background-color: #2e2a2e !important;
-  -webkit-transition: left ease-in-out 0.5s;
-  transition: left ease-in-out 0.5s;
-  position: relative;
-  left: 5%;
-  width: 100%;
-  height: 100%;
-  height: auto;
-}
+/* #section-competences-textarea {
+    background-color: $mediumDarkBgColor !important;
+    transition: left ease-in-out 0.5s;
+    position: relative;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    height: auto;
 
-#section-competences-textarea li {
-  margin-top: 10px;
-}
+    li {margin-top: 10px;}
 
-#section-competences-textarea ul {
-  margin-top: 15px;
-}
+    ul {
+        margin-top: 15px;
+    }
 
-@media (max-width: 992px) {
-  #section-competences-textarea {
-    left: 0px;
-    -webkit-transition: left 0.5s;
-    transition: left 0.5s;
-  }
+    @media (max-width: $lg) {
+        left: 0px;
+        transition: left 0.5s;
+    }
 }
 
 .animerMargeCompetences {
-  left: 5% !important;
+    left: 5% !important;
+
+    @media (max-width: $lg) {
+        Left: 0px !important;
+    }
 }
 
-@media (max-width: 992px) {
-  .animerMargeCompetences {
-    Left: 0px !important;
-  }
-}
-
+//Conteneur où est affichée la marge avec no de lignes
 #section-competences-textarea-marge {
-  background-color: #2e2a2e;
-  width: 60px;
-  height: 100%;
-  height: auto;
-  border-right: solid 1px #625e5d;
+    background-color: $mediumDarkBgColor;
+    width: 60px;
+    height: 100%;
+    height: auto;
+    border-right: solid 1px $mainTextColor;
+
+    p {
+        margin-left: 20px;
+        margin-right: 5px;
+        color: $mainTextColor;
+        font-size: 16px;
+    }
 }
 
-#section-competences-textarea-marge p {
-  margin-left: 20px;
-  margin-right: 5px;
-  color: #625e5d;
-  font-size: 16px;
-}
-
+//Contenu en tant que tel de la section competence 
 #section-competences-contenu {
-  -webkit-transition: all 0.5s !important;
-  transition: all 0.5s !important;
-  padding-top: 30px;
-  padding-bottom: 100px;
-  margin-left: 5%;
-  -webkit-transition: padding-left 0.5s;
-  transition: padding-left 0.5s;
-  height: 100%;
-  width: 78%;
-  -ms-flex-preferred-size: unset;
-      flex-basis: unset;
-}
+    transition: all 0.5s !important;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    margin-left: 5%;
+    transition: padding-left 0.5s;
+    height: 100%;
+    width: 78%;
+    flex-basis: unset;
 
-@media (max-width: 992px) {
-  #section-competences-contenu {
-    width: 80%;
-    margin-left: 5px;
-    -ms-flex-preferred-size: unset;
+    @media (max-width: $lg) {
+        width: 80%;
+        margin-left: 5px;
         flex-basis: unset;
-  }
-}
+    }
 
-@media (max-width: 576px) {
-  #section-competences-contenu {
-    width: 65%;
-  }
-}
+    @media (max-width: $sm) {
+        width: 65%;
+    }
 
-#section-competences-contenu ul {
-  opacity: 0.7;
+    ul {
+        opacity: 0.7;
+        //color: $highlightTextColor;
+    }
 }
 
 .animerCompetences {
-  margin-left: 6% !important;
-  width: 80% !important;
-}
+    margin-left: 6% !important;
+    width: 80% !important;
 
-.animerCompetences ul {
-  opacity: 1 !important;
-}
+    ul {
+        opacity: 1 !important;
+    }
 
-@media (max-width: 768px) {
-  .animerCompetences {
-    margin-left: 15px !important;
-  }
-}
+    @media (max-width: $md) {
+        margin-left: 15px !important;
+    }
 
-@media (max-width: 576px) {
-  .animerCompetences {
-    width: 65% !important;
-  }
+    @media (max-width: $sm) {
+        width: 65% !important;
+    }
 }
-
+ */
 /******************************************************************************/
 /************ Section Réalisations
 /*****************************************************************************/
@@ -525,10 +506,10 @@ section {
 }
 
 #section-realisations ul {
-  color: #231f22;
+  color: #625e5d;
 }
 
-#section-realisations h3 {
+#section-realisations h3, #section-realisations #css-overrides h4, #css-overrides #section-realisations h4 {
   color: #625e5d;
 }
 
@@ -536,6 +517,9 @@ section {
   background-color: #d5dddf !important;
 }
 
+/* #section-realisations :first-child {
+    // transition: all 0.5s;
+} */
 /******************************************************************************/
 /************ Section Expériences de travail
 /*****************************************************************************/
@@ -544,6 +528,10 @@ section {
   padding-bottom: 100px;
   background-color: #f6efe7;
   height: 100%;
+  /* h3 {
+        //color: $mainTextColor;
+    }
+ */
 }
 
 #section-experiences ul, #section-experiences li {
@@ -568,6 +556,9 @@ section {
   border-left: 1px solid #625e5d;
 }
 
+/* #section-experiences :first-child {
+    // transition: all 0.5s;
+} */
 /******************************************************************************/
 /************ Footer
 /*****************************************************************************/

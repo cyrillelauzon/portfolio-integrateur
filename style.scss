@@ -7,10 +7,9 @@
 @import "_css/animation";
 @import "_css/text-styles";
 @import "_css/bootstrap";
+@import "_css/components";
 
 
-@import "_css/_bio";
-@import "_css/_competences";
 
 
 
@@ -25,11 +24,57 @@
     //@include quickFadeInAnimation();
 }
 
-#css-overrides .container-lg {
+/* #css-overrides .container-lg {
    // background-color: $grayBgColor;
+}
+ */
+/******************************************************************************/
+/************ Section Bio
+/*****************************************************************************/
+
+#section-bio{
+    background-color: $bg-blue;
+}
+
+//Contenu de l'entete: photo profil et liens
+#section-bio-profile {
+    animation: 0.5s ease-in 0s 1 FadeInBio;
+   
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+
+    //background-color: $bg-peach !important;
 }
 
 
+.text-bio{
+    width: 40%;
+    //margin-left: auto;
+}
+
+.bio-header {
+    @extend .float-text;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    //border-bottom: 2px solid $line-accent;    
+}
+
+
+
+
+/******************************************************************************/
+/************ Section Compétences V2
+/*****************************************************************************/
+
+#section-competences{
+    height: 100%;
+    background-color: $bg-blue;
+}
+
+/* #competences-formation{
+    //@include float-box;
+} */
 
 
 
@@ -40,7 +85,7 @@
 
 
 //Conteneur avec arriere plan pale
-#section-competences-textarea {
+/* #section-competences-textarea {
     background-color: $mediumDarkBgColor !important;
     transition: left ease-in-out 0.5s;
     position: relative;
@@ -128,7 +173,7 @@
         width: 65% !important;
     }
 }
-
+ */
 
 /******************************************************************************/
 /************ Section Réalisations
@@ -142,7 +187,7 @@
     opacity: 1;
 
     ul {
-        color: $darkBgColor;
+        color: $mainTextColor;
     }
 
     h3 {
@@ -157,9 +202,9 @@
 
 //Responsive, permet d'éviter changements de positions brutes lors
 //de redimensionnement de page
-#section-realisations :first-child {
+/* #section-realisations :first-child {
     // transition: all 0.5s;
-}
+} */
 
 /******************************************************************************/
 /************ Section Expériences de travail
@@ -175,10 +220,10 @@
         color: $mainTextColor;
     }
 
-    h3 {
+    /* h3 {
         //color: $mainTextColor;
     }
-
+ */
     h4 {
         color: $mainTextColor;
         font-weight: bold;
@@ -202,9 +247,9 @@
 
 //Responsive, permet d'éviter changements de positions brutes lors
 //de redimensionnement de page
-#section-experiences :first-child {
+/* #section-experiences :first-child {
     // transition: all 0.5s;
-}
+} */
 
 /******************************************************************************/
 /************ Footer
