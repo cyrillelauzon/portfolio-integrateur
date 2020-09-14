@@ -81,20 +81,17 @@ Définition de styles de textes
 /******************************************************************************/
 /************ Styles de titres
 /******************************************************************************/
-#css-overrides h1 {
+#css-overrides h1, #css-overrides h2, #css-overrides h3 {
   font-family: "Roboto Condensed";
   font-size: 36px;
   color: #625e5d;
   font-weight: bold;
 }
 
-#css-overrides h2,
-#css-overrides h3 {
-  font-family: "Roboto Condensed";
-  font-size: 24px;
+#css-overrides h2, #css-overrides h3 {
+  font-size: 30px;
   color: #625e5d;
   font-weight: normal;
-  margin-bottom: 30px;
 }
 
 #css-overrides h3 {
@@ -178,15 +175,15 @@ a:hover {
   margin-left: 20px;
 }
 
-.muted {
-  color: #7c7978;
+#css-overrides li .muted {
+  color: #a09997 !important;
 }
 
-.underlined {
+#css-overrides .underlined {
   text-decoration: underline;
 }
 
-.underlined:hover {
+#css-overrides .underlined:hover {
   text-decoration: underline;
 }
 
@@ -288,7 +285,7 @@ section {
 /******************************************************************************/
 /******************************* Boites Flottantes
 /******************************************************************************/
-#css-overrides .float-text, #css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
+#css-overrides .float-text, #css-overrides .float-text-quote, #css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
   padding: 15px;
   margin-bottom: 30px;
 }
@@ -299,8 +296,8 @@ section {
           box-shadow: 7px 11px 3px 0px #b5b1b5;
 }
 
-#css-overrides .float-box h3, #css-overrides .float-box-code h3, #css-overrides .bio-header h3 {
-  border-bottom: 2px solid #625e5d82;
+#css-overrides .float-box li, #css-overrides .float-box-code li, #css-overrides .bio-header li {
+  color: #625e5d;
 }
 
 #css-overrides .float-box-code {
@@ -315,8 +312,12 @@ section {
   color: #fcfcfa;
 }
 
-#css-overrides .float-box-code .muted {
-  color: #7c7978;
+#css-overrides .float-box-code li .muted {
+  color: #7c7978 !important;
+}
+
+#css-overrides .float-box-code hr {
+  border-color: #7c7978 !important;
 }
 
 /******************************************************************************/
@@ -360,7 +361,6 @@ section {
   height: 100%;
   width: 100%;
   opacity: 1;
-  background-color: #d5dddf !important;
 }
 
 .text-bio {
@@ -370,20 +370,24 @@ section {
 .bio-header {
   margin-top: 100px;
   padding-bottom: 30px;
+  background-color: #d5dddf !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
-#bio-tagline {
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-}
+/* #bio-tagline {
+    padding-bottom: 30px;
+    margin-bottom: 200px !important;
+    //border-bottom: 2px solid $line-accent;
 
-#bio-tagline p {
-  font-family: "Roboto Condensed";
-  font-size: 18px;
-  color: #625e5d;
-  font-weight: normal;
-}
-
+    background-color: $bg-blue !important;
+    p{
+        font-family: $mainFontFamilly;
+        font-size: 18px;
+        color: $mainTextColor;
+        font-weight: normal;
+    }
+} */
 /******************************************************************************/
 /************ Section Compétences
 /*****************************************************************************/

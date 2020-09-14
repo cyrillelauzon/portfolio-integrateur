@@ -122,15 +122,24 @@ section {
     //border-bottom: 2px solid $line-accent;
 }
 
+//Texte flottant 
+#css-overrides .float-text-quote {
+    @extend .float-text;
+    //border-bottom: 2px solid $line-accent;
+    //border-top: 2px solid $line-accent;
+    //background-color: $bg-peach !important;
+}
+
 //Boite flottante avec fond peach
 #css-overrides .float-box {
     @extend .float-text;
     background-color: $bg-peach;
     box-shadow: 7px 11px 3px 0px rgba(181,177,181,1);  
     
-    h3{
-        border-bottom: 2px solid $line-accent;
+    li{
+        color: $mainTextColor;
     }
+
 }
 
 //Boite flottante avec aspect boite de code
@@ -140,15 +149,19 @@ section {
 
     h3{
         color: $green;
-        
     }
 
     li{
         color: $codeTextColor;
     }
 
-    .muted{
-        color: $codeMutedTextColor;
+    li .muted{
+        color: $codeMutedTextColor !important;
+    }
+
+    hr{
+        border-color: $codeMutedTextColor !important;
+
     }
 }
 

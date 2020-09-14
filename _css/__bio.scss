@@ -15,7 +15,7 @@
     width: 100%;
     opacity: 1;
 
-    background-color: $bg-blue !important;
+    //background-color: $bg-peach !important;
 }
 
 
@@ -28,22 +28,25 @@
     @extend .float-box;
     margin-top: 100px;
     padding-bottom: 30px;
+    background-color: $bg-blue !important;
+    box-shadow: none !important;
 
     //border-bottom: 2px solid $line-accent;    
 }
 
-#bio-tagline {
+/* #bio-tagline {
     padding-bottom: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 200px !important;
     //border-bottom: 2px solid $line-accent;
 
+    background-color: $bg-blue !important;
     p{
         font-family: $mainFontFamilly;
         font-size: 18px;
         color: $mainTextColor;
         font-weight: normal;
     }
-}
+} */
 
 
 
