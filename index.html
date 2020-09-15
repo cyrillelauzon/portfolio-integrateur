@@ -26,12 +26,24 @@
 
 <body id="css-overrides">
 
-  <!--  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <a class="navbar-brand" href="#">Cyrille Lauzon</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#section-realisations">Réalisations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section-realisations">Compétences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section-realisations">Expériences de travail</a>
+      </li>
+      </ul>
   </nav> -->
 
   <main class="container-fluid">
@@ -40,18 +52,17 @@
       <div id="section-bio-profile" class="container-lg">
         <div class="row">
           <div class="col-md-3"></div>
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center anim-strech-h">
 
             <div class="col-md-12 bio-header">
-
-
-              <img class="img-profile" src="img/profile-pic.jpg" alt="Photo de profil" />
-              <h1>Cyrille Lauzon</h1>
-              <h2>Intégrateur web</h2>
+              <img class="img-profile anim-prog-fade" src="img/profile-pic.jpg" alt="Photo de profil" />
+              <h1 class="anim-prog-fade"><span class=text-wrapper"> <span class="letters">Cyrille Lauzon</span></span>
+              </h1>
+              <h2 class="anim-prog-fade"> <span class="letters">Intégrateur web</span></h2>
 
 
               <!-- Icones Liens  -->
-              <ul class="text-center">
+              <ul class="text-center anim-prog-fade">
                 <li>
                   <a href="https://www.linkedin.com/in/cyrille-lauzon-8b4aa91b1/" target="_blank">
                     <img class="img-media-icon" src="img/linkedin.svg" alt="Mon profil Linkedin" /></a>
@@ -68,20 +79,90 @@
 
             </div>
 
-            <div class="float-text">
-              <p class="text-center">Intérêt marqué pour le web et les interfaces graphiques</p>
-              <p class="text-center">Grande expérience en réalisation de projets artistiques (solo et en équipe),
+            <div class="float-text-frame">
+              <p class="text-center anim-prog-fade">Intérêt marqué pour le web et les interfaces<br />
+                graphiques</p>
+              <p class="text-center anim-prog-fade">Grande expérience en réalisation de projets artistiques (solo
+                et en équipe),
                 très
                 bon sens de la
                 composition et du détail</p>
-              <p class="text-center">Soucis du code bien documenté et respect des standards du web</p>
+              <p class="text-center anim-prog-fade">Soucis du code bien documenté et respect des standards du
+                web</p>
+              
             </div>
+            <a href="#section-realisations" class="text-center anim-prog-fade" onclick="OnScroll('#section-realisations')">
+              <svg class="anim-pulse-light button-down " width="1.4em" height="1.4em" viewBox="0 0 16 16"
+                class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+              </svg></a>
 
           </div>
           <div class="col-md-3"></div>
         </div>
       </div>
       <div class="section-spacer"></div>
+    </section>
+
+
+
+    <!-- Section Réalisations -->
+    <section>
+      <div id="section-realisations">
+        <div class="container-lg">
+          <h2>Réalisations</h2>
+          <div class="row">
+
+            <div class="col-lg-8">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <a href="http://cyrillelauzon.com" target="_blank"><img class="card-img-top" src="img/cyrillelauzon.jpg"
+                    alt="Capture d'écran de cyrillelauzon.com" /></a>
+                <div class="card-body">
+                  <ul>
+                    <li>Portfolio du travail réalisé en arts médiatiques</li>
+                    <li><a href="http://cyrillelauzon.com" target="_blank"
+                        class="btn btn-secondary">cyrillelauzon.com</a></li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              <div class="float-box">
+                <ul class="ul-dash">
+                  <li>Design et programmation d'un thème Wordpress réactif qui s'adapte à tout appareil. Implantation du
+                    thème sur deux
+                    sites webs distincts.</li>
+                  <li>Emploi de Bootstrap 4, Sass (variables, mixins, préfixes de navigateur) et PHP</li>
+                  <li><a href="https://github.com/cyrillelauzon/minimal-gray" class="underlined" target="_blank">Tous
+                      les
+                      détails sont disponibles sur la page Github du projet</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <a href="http://suzanvachon.org" target="_blank"><img class="card-img-top" src="img/suzanvachon.jpg"
+                    alt="Capture d'écran de suzanvachon.org" /></a>
+                <div class="card-body">
+                  <ul>
+                    <li>Site web de l'artiste Suzan Vachon</li>
+                    <li><a href="http://suzanvachon.org" target="_blank" class="btn btn-secondary">suzanvachon.org</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-spacer-small"></div>
+      </div>
+
     </section>
 
 
@@ -184,63 +265,6 @@
 
 
 
-    <!-- Section Réalisations -->
-    <section>
-      <div id="section-realisations">
-        <div class="container-lg">
-          <h2>Réalisations</h2>
-          <div class="row">
-
-            <div class="col-lg-8">
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <a href="http://cyrillelauzon.com" target="_blank"><img class="card-img-top" src="img/cyrillelauzon.jpg"
-                    alt="Capture d'écran de cyrillelauzon.com" /></a>
-                <div class="card-body">
-                  <ul>
-                    <li>Portfolio du travail réalisé en arts médiatiques</li>
-                    <li><a href="http://cyrillelauzon.com" target="_blank"
-                        class="btn btn-secondary">cyrillelauzon.com</a></li>
-                  </ul>
-                </div>
-              </div>
-              <br />
-
-              <div class="float-box">
-                <ul class="ul-dash">
-                  <li>Design et programmation d'un thème Wordpress réactif qui s'adapte à tout appareil. Implantation du
-                    thème sur deux
-                    sites webs distincts.</li>
-                  <li>Emploi de Bootstrap 4, Sass (variables, mixins, préfixes de navigateur) et PHP</li>
-                  <li><a href="https://github.com/cyrillelauzon/minimal-gray" class="underlined" target="_blank">Tous
-                      les
-                      détails sont disponibles sur la page Github du projet</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <a href="http://suzanvachon.org" target="_blank"><img class="card-img-top" src="img/suzanvachon.jpg"
-                    alt="Capture d'écran de suzanvachon.org" /></a>
-                <div class="card-body">
-                  <ul>
-                    <li>Site web de l'artiste Suzan Vachon</li>
-                    <li><a href="http://suzanvachon.org" target="_blank" class="btn btn-secondary">suzanvachon.org</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-spacer-small"></div>
-      </div>
-
-    </section>
     <!-- Section Expériences de travail -->
     <section>
       <div id="section-experiences">
@@ -248,8 +272,8 @@
           <h2>Expériences de travail</h2>
           <div class="row">
             <div class="col-lg-8">
-              
-              
+
+
 
               <div class='div-emploi'>
                 <h4>Design de sites web</h4>
@@ -341,6 +365,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Inclusions bootstrap -->
+  <script src="_js/anime.min.js"></script>
 
   <!-- Inclusions bootstrap -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"

@@ -11,12 +11,93 @@ document.body.classList.add('js-Page-Loading');
 window.addEventListener("load", AfficherAnimations);
 
 function AfficherAnimations() {
-  document.body.classList.remove('js-Page-Loading');
-  
-  //hack temp
-  /*let offset = window.pageYOffset;
-  let divBioPict = document.getElementById("section-bio-bg-pict");
-  divBioPict.style.backgroundPositionY = offset * 0.2 + "px";*/
+    document.body.classList.remove('js-Page-Loading');
+
+    // document.getElementsByClassName('rouge test')
+
+    var classes = document.getElementsByClassName('letters');
+    for (var i = 0; i < classes.length; i++) {
+        var textWrapper = classes[i];
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    }
+
+
+    //var textWrapper = document.querySelector('.ml3 .letters');
+
+    var timel = anime.timeline({
+
+    });
+    timel.add({
+        targets: '.anim-prog-fade',
+        opacity: [0, 1],
+        //scaleY: [0, 1], // from 100 to 250
+        loop: false,
+        easing: 'easeInOutSine',
+        duration: 150,
+        delay: anime.stagger(100)
+    });
+
+
+    timel.add({
+        targets: '.anim-pulse-light',
+        duration: 1000,
+        keyframes: [
+            { scale: [1, 1.3] },
+            { scale: [1.3, 1] },
+            { color: '#625e5d' },
+            { color: '#706b6a' },
+            { color: '#625e5d' }
+        ],
+        easing: 'easeInOutSine',
+    }, 1600);
+
+    /*      anime({
+            targets: '.anim-strech-h',
+            scaleX: [0, 1], // from 100 to 250
+            translateY: [-200, 0],
+            loop: false,
+            easing: 'linear',
+            duration: 100,
+            delay: anime.stagger(100)
+        }); */
+
+
+
+    anime({
+        targets: '.letter',
+        opacity: [0, 1],
+        scaleY: [0, 1], // from 100 to 250
+        loop: false,
+        easing: 'linear',
+        duration: 100,
+        delay: anime.stagger(20)
+    });
+    /* 
+        anime({
+            targets: '.ml3',
+            opacity: [0, 1],
+            scaleX: [0, 1], // from 100 to 250
+            loop: false,
+            easing: 'linear',
+            duration: 200,
+            delay: anime.stagger(20)
+        }); 
+    
+    
+        anime({
+            targets: '#section-bio-profile',
+            opacity: [0, 1],
+            translateY: [-200, 0], // from 100 to 250
+            loop: false,
+            easing: 'linear',
+            duration: 500,
+            delay: anime.stagger(20)
+        }); */
+
+    //hack temp
+    /*let offset = window.pageYOffset;
+    let divBioPict = document.getElementById("section-bio-bg-pict");
+    divBioPict.style.backgroundPositionY = offset * 0.2 + "px";*/
 }
 
 
@@ -35,7 +116,7 @@ window.onscroll = function () {
     console.log(divBioPict.style.backgroundPositionY);*/
 
 
-   
+
     //Animations section competence
     /*let divCompetences = document.getElementById("section-competences-contenu");
     let divMarge = document.getElementById("section-competences-textarea");
@@ -49,8 +130,8 @@ window.onscroll = function () {
         divCompetences.classList.remove("animerCompetences");
         divMarge.classList.remove("animerMargeCompetences");
     }*/
-    
-   // FadeInDiv("#section-competences", 0.6);
+
+    // FadeInDiv("#section-competences", 0.6);
     //FadeInDiv("section-realisations");
     //FadeInDiv("section-experiences");
 };
@@ -62,14 +143,14 @@ window.onscroll = function () {
  * @param {number} [pctBase=0] Opacité plancher, en pourcentage
  * @returns ne fait rien si id est invalide
  */
-function FadeInDiv(idDiv, pctBase = 0){
+function FadeInDiv(idDiv, pctBase = 0) {
     let divSelect = document.getElementById(idDiv);
-    if(divSelect === undefined) return;
-    
+    if (divSelect === undefined) return;
+
     let curY = window.scrollY;
     let minY = divSelect.offsetTop - (divSelect.scrollHeight - 100);
     let maxY = divSelect.offsetTop;
-    if( curY > minY){
+    if (curY > minY) {
         let pct = pctBase + (curY / maxY);
         divSelect.style.opacity = pct;
     }
@@ -79,10 +160,18 @@ function FadeInDiv(idDiv, pctBase = 0){
  * @description RetourHautPage retour animé vers haut de la page
  * NB nécessite JQuery
  */
-function RetourHautPage(){
-    
+function RetourHautPage() {
+
     event.preventDefault();
     $('html, body').animate({
         scrollTop: "0px"
     }, 800);
+}
+
+function OnScroll(scrollTo) {
+    event.preventDefault();
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(scrollTo).offset().top
+    }, 800);
+
 }

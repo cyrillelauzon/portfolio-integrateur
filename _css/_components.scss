@@ -13,6 +13,22 @@ Définitions de composantes graphiques réutilisables
 /* section {
 //    padding-bottom: 100px;
 } */
+.ml3{
+    transform-origin: top center;
+ //   display: inline-block;
+}
+
+.text-wrapper{
+    display: inline-block;
+}
+.ml3 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.button-down{
+    margin-top:60px;
+}
 
 .section-spacer{
     height: 250px;
@@ -52,8 +68,9 @@ Définitions de composantes graphiques réutilisables
 }
 
 .img-media-icon {
-    width: 20px;
-    height: 20px;
+    fill: $mainTextColor !important;
+    width: 1.4em;
+    height: 1.4em;
 }
 
 
