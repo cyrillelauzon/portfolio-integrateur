@@ -1,4 +1,3 @@
-
 /*****************************************************************************
 components.scss
 
@@ -13,28 +12,29 @@ Définitions de composantes graphiques réutilisables
 /* section {
 //    padding-bottom: 100px;
 } */
-.ml3{
+.ml3 {
     transform-origin: top center;
- //   display: inline-block;
+    //   display: inline-block;
 }
 
-.text-wrapper{
+.text-wrapper {
     display: inline-block;
 }
+
 .ml3 .letter {
     display: inline-block;
     line-height: 1em;
 }
 
-.button-down{
-    margin-top:60px;
+.button-down {
+    //margin-top: 60px;
 }
 
-.section-spacer{
+.section-spacer {
     height: 250px;
 }
 
-.section-spacer-small{
+.section-spacer-small {
     height: 100px;
 }
 
@@ -52,7 +52,7 @@ Définitions de composantes graphiques réutilisables
     height: auto;
     border-radius: 50%;
     margin-bottom: 10px;
-    margin-top: 30px;
+    //margin-top: 30px;
 }
 
 .thumbnails {
@@ -81,14 +81,21 @@ Définitions de composantes graphiques réutilisables
 //Texte flottant 
 #css-overrides .float-text {
     padding: 15px;
+    margin-top: 0px;
     margin-bottom: $elementStdMargin;
     //border-bottom: 2px solid $line-accent;
 
-    li{
+    li {
         color: $mainTextColor;
     }
+
+    @media (max-width: $md) {
+        p {
+            margin-bottom: 0.2rem;
+        }
+    }
 }
- 
+
 //Texte flottant avec ligne de cadre pour haut et bas
 #css-overrides .float-text-frame {
     @extend .float-text;
@@ -101,7 +108,7 @@ Définitions de composantes graphiques réutilisables
 #css-overrides .float-box {
     @extend .float-text;
     background-color: $bg-peach;
-    box-shadow: 7px 11px 3px 0px rgba(181,177,181,1);  
+    box-shadow: 7px 11px 3px 0px rgba(181, 177, 181, 1);
 }
 
 
@@ -110,20 +117,28 @@ Définitions de composantes graphiques réutilisables
     @extend .float-box;
     background-color: $bg-gray;
 
-    h3{
+    h3 {
         color: $green;
     }
 
-    li{
+    li {
         color: $codeTextColor;
     }
 
-    li .muted{
+    li .muted {
         color: $codeMutedTextColor !important;
     }
 
-    hr{
+    hr {
         border-color: $codeMutedTextColor !important;
 
     }
 }
+
+#css-overrides .line {
+    display: inline-block;
+    width: 100%;
+    border-top: 2px solid $line-accent;
+}
+
+#css-overrides .anim-line {}

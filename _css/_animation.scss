@@ -4,9 +4,10 @@ animations.scss
 Helpers gestion des animations CSS
 /******************************************************************************/
 
-
 //variables
-$shortSpeed : 0.5s;
+$shortSpeed : 0.3s;
+$shortSlide : 0.3s;
+
 
 //Est enlevé par javascript lorsque la page est chargée
 //Permet de lancer les animations à ce moment
@@ -17,7 +18,7 @@ $shortSpeed : 0.5s;
 }
 
 
-//Permet d'animer un fade-in sur la page par exemple
+//Transition: FadeIn
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -29,14 +30,54 @@ $shortSpeed : 0.5s;
 }
 
 @mixin quickFadeInAnimation {
-    animation: fadeInAnimation ease $shortSpeed ;
+    animation: fadeInAnimation ease-in-out $shortSpeed ;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 
+//Transition: SlideIn
+@keyframes SlideInAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+//Transition: SlideOut
+@keyframes SlideOutAnimation {
+    0% {
+        opacity: 1;
+
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+}
+
+
+.anim-quick-slidein {
+    animation: SlideInAnimation ease-in $shortSlide ;
+}
+
+.anim-quick-slideout {
+    animation: SlideOutAnimation ease-in $shortSlide ;
+    animation-play-state: running;
+}
+
+
+
+
 //Formule générique pour animer une transition sur propriété donnée
-@mixin animateTransitionHover($property, $src, $dest) {
+@mixin animateTransition($property, $src, $dest) {
     #{$property}: $dest;
     transition: #{$property} $shortSpeed ease-in-out;
 
@@ -48,14 +89,13 @@ $shortSpeed : 0.5s;
 
 //Raccourci pour uniformiser les fade-in fade-out d'éléments à travers le site
 @mixin opacityFadeOnHover($opacity) {
-   @include animateTransitionHover(opacity, $opacity, 1);
+   @include animateTransition(opacity, $opacity, 1);
 }
 
 //Uniformisation des changements de couleur sur Hover
 @mixin colorChangeOnHover($src, $dest) {
-    @include animateTransitionHover(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransitionHover
+    @include animateTransition(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
  }
-
 
  //Fonction utilitaire qui change l'image en arrière plan
   @mixin bgImage($url) {

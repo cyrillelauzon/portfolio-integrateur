@@ -83,12 +83,16 @@ Définition de styles de textes
 
 a{
     @include opacityFadeOnHover(0.7);
+    outline: none !important;
 
     &:hover{
         text-decoration: none;
     }
 }
 
+button{
+    outline: none !important;
+}
 
 /******************************************************************************/
 /************ Listes

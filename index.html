@@ -14,8 +14,9 @@
   <link rel="shortcut icon" href="/img/favicon.ico" />
 
   <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 
   <!-- Style.css-->
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -26,27 +27,58 @@
 
 <body id="css-overrides">
 
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="#">Cyrille Lauzon</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#section-realisations">Réalisations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-realisations">Compétences</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section-realisations">Expériences de travail</a>
-      </li>
-      </ul>
-  </nav> -->
-
   <main class="container-fluid">
+
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-light sticky-top" data-toggle="affix">
+
+      <div class="nav-toggler-wrapper text-center">
+        <button class="navbar-toggler" onclick="ChangeToggleButton()" type="button" data-toggle="collapse"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span id="nav-toggle-icon" class="navbar-toggler-icon toggler-icon-hamburger"></span>
+        </button>
+      </div>
+
+      <div id="nav-modal" class="collapse anim-quick-slidein" data-backdrop="static">
+        <ul>
+          <li class="nav-item">
+            <a class="navbar-brand" href="" onclick="RetourHautPage();">Cyrille Lauzon</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#section-realisations"
+              onclick="OnScroll('#section-realisations')">Réalisations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-competences" onclick="OnScroll('#section-competences')">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-experiences" onclick="OnScroll('#section-experiences')">Expériences de
+              travail</a>
+          </li>
+
+          <li <ul class="text-center ">
+          <li>
+            <a href="https://www.linkedin.com/in/cyrille-lauzon-8b4aa91b1/" target="_blank">
+              <img class="img-media-icon" src="img/linkedin.svg" alt="Mon profil Linkedin" /></a>
+            &nbsp;
+
+            <a href="https://github.com/cyrillelauzon" target="_blank">
+              <img class="img-media-icon" src="img/github.svg" alt="Ma page Github" /></a>
+            &nbsp;
+            <a href="mailto:cyrillelauzon@gmail.com"><img class="img-media-icon" src="img/email.svg"
+                alt="Mon adresse courriel" /></a>
+          </li>
+        </ul>
+        </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+
     <!-- Section Bio -->
     <section id="section-bio">
       <div id="section-bio-profile" class="container-lg">
@@ -79,7 +111,8 @@
 
             </div>
 
-            <div class="float-text-frame">
+            <div class="float-text">
+              <span class="line anim-line"></span>
               <p class="text-center anim-prog-fade">Intérêt marqué pour le web et les interfaces<br />
                 graphiques</p>
               <p class="text-center anim-prog-fade">Grande expérience en réalisation de projets artistiques (solo
@@ -89,9 +122,10 @@
                 composition et du détail</p>
               <p class="text-center anim-prog-fade">Soucis du code bien documenté et respect des standards du
                 web</p>
-              
+              <span class="line anim-line"></span>
             </div>
-            <a href="#section-realisations" class="text-center anim-prog-fade" onclick="OnScroll('#section-realisations')">
+            <a href="#section-realisations" class="text-center anim-prog-fade"
+              onclick="OnScroll('#section-realisations')">
               <svg class="anim-pulse-light button-down " width="1.4em" height="1.4em" viewBox="0 0 16 16"
                 class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -375,9 +409,10 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
 
   <!-- Inclusions javascript -->
   <script src="_js/index.js">

@@ -6,12 +6,18 @@ Gestion des animations déclenchées par défilement
 
 
 
+
+
 //Gestion du chargement de page et animations:
 document.body.classList.add('js-Page-Loading');
 window.addEventListener("load", AfficherAnimations);
 
 function AfficherAnimations() {
     document.body.classList.remove('js-Page-Loading');
+
+
+    InitToggleMenu();
+
 
     // document.getElementsByClassName('rouge test')
 
@@ -38,7 +44,7 @@ function AfficherAnimations() {
     });
 
 
-    timel.add({
+ /*    timel.add({
         targets: '.anim-pulse-light',
         duration: 1000,
         keyframes: [
@@ -49,17 +55,17 @@ function AfficherAnimations() {
             { color: '#625e5d' }
         ],
         easing: 'easeInOutSine',
-    }, 1600);
+    }, 1600); */
 
-    /*      anime({
-            targets: '.anim-strech-h',
-            scaleX: [0, 1], // from 100 to 250
-            translateY: [-200, 0],
-            loop: false,
-            easing: 'linear',
-            duration: 100,
-            delay: anime.stagger(100)
-        }); */
+    anime({
+        targets: '.anim-line',
+        scaleX: [0, 1], // from 100 to 250
+        //translateY: [-200, 0],
+        loop: false,
+        easing: 'linear',
+        duration: 400,
+        delay: anime.stagger(100)
+    });
 
 
 
@@ -98,6 +104,61 @@ function AfficherAnimations() {
     /*let offset = window.pageYOffset;
     let divBioPict = document.getElementById("section-bio-bg-pict");
     divBioPict.style.backgroundPositionY = offset * 0.2 + "px";*/
+}
+
+function InitToggleMenu() {
+    var modalMenu = document.querySelector("#nav-modal");
+    modalMenu.addEventListener("animationend", function () {
+
+        if (modalMenu.classList.contains("anim-quick-slidein")) {
+            console.log("anim-quick-slidein ended");
+            modalMenu.classList.remove("anim-quick-slidein");
+        }
+        else if (modalMenu.classList.contains("anim-quick-slideout")) {
+            console.log("anim-quick-slideout ended");
+            modalMenu.classList.remove("anim-quick-slideout");
+            modalMenu.style.display = "none";
+        }
+
+    }, false);
+
+}
+
+
+/**
+* @description Handler Lorsque le bouton hamburger est appuyé sur menu mobile
+*/
+function ChangeToggleButton() {
+
+    var toggleButton = document.querySelector("#nav-toggle-icon");
+    if (toggleButton.classList.contains("toggler-icon-hamburger")) {
+        ShowAppMenu();
+    }
+    else if (toggleButton.classList.contains("toggler-icon-close")) {
+        HideAppMenu();
+    }
+}
+
+function ShowAppMenu() {
+    var toggleButton = document.querySelector("#nav-toggle-icon");
+    var modalMenu = document.querySelector("#nav-modal");
+
+    toggleButton.classList.remove("toggler-icon-hamburger");
+    toggleButton.classList.add("toggler-icon-close");
+
+    modalMenu.classList.add("anim-quick-slidein");
+    modalMenu.style.display = "block";
+}
+
+
+function HideAppMenu() {
+    var toggleButton = document.querySelector("#nav-toggle-icon");
+    var modalMenu = document.querySelector("#nav-modal");
+
+    toggleButton.classList.remove("toggler-icon-close");
+    toggleButton.classList.add("toggler-icon-hamburger");
+
+    modalMenu.classList.add("anim-quick-slideout");
 }
 
 
@@ -166,12 +227,31 @@ function RetourHautPage() {
     $('html, body').animate({
         scrollTop: "0px"
     }, 800);
+
+    var mq = window.matchMedia("(max-width: 768px)");
+    if (mq.matches) {
+        HideAppMenu();
+    }
 }
 
 function OnScroll(scrollTo) {
     event.preventDefault();
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $(scrollTo).offset().top
-    }, 800);
+
+    var offset = $(scrollTo).offset().top;
+
+    //cacher le menu de navigation si sur mobile
+    var mq = window.matchMedia("(max-width: 768px)");
+    if (mq.matches) {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: offset - 56
+        }, 800);
+
+        HideAppMenu();
+    }
+    else {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: offset
+        }, 800);
+    }
 
 }
