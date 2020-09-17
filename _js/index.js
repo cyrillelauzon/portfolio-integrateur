@@ -21,6 +21,9 @@ function AfficherAnimations() {
 
     // document.getElementsByClassName('rouge test')
 
+
+    //Pour effet de titre Cyrille Lauzon intégrageur web
+    //enrober chaque lettre dans un span
     var classes = document.getElementsByClassName('letters');
     for (var i = 0; i < classes.length; i++) {
         var textWrapper = classes[i];
@@ -44,18 +47,18 @@ function AfficherAnimations() {
     });
 
 
- /*    timel.add({
-        targets: '.anim-pulse-light',
-        duration: 1000,
-        keyframes: [
-            { scale: [1, 1.3] },
-            { scale: [1.3, 1] },
-            { color: '#625e5d' },
-            { color: '#706b6a' },
-            { color: '#625e5d' }
-        ],
-        easing: 'easeInOutSine',
-    }, 1600); */
+    /*    timel.add({
+           targets: '.anim-pulse-light',
+           duration: 1000,
+           keyframes: [
+               { scale: [1, 1.3] },
+               { scale: [1.3, 1] },
+               { color: '#625e5d' },
+               { color: '#706b6a' },
+               { color: '#625e5d' }
+           ],
+           easing: 'easeInOutSine',
+       }, 1600); */
 
     anime({
         targets: '.anim-line',
@@ -78,27 +81,6 @@ function AfficherAnimations() {
         duration: 100,
         delay: anime.stagger(20)
     });
-    /* 
-        anime({
-            targets: '.ml3',
-            opacity: [0, 1],
-            scaleX: [0, 1], // from 100 to 250
-            loop: false,
-            easing: 'linear',
-            duration: 200,
-            delay: anime.stagger(20)
-        }); 
-    
-    
-        anime({
-            targets: '#section-bio-profile',
-            opacity: [0, 1],
-            translateY: [-200, 0], // from 100 to 250
-            loop: false,
-            easing: 'linear',
-            duration: 500,
-            delay: anime.stagger(20)
-        }); */
 
     //hack temp
     /*let offset = window.pageYOffset;
@@ -106,16 +88,20 @@ function AfficherAnimations() {
     divBioPict.style.backgroundPositionY = offset * 0.2 + "px";*/
 }
 
+
+
+
+/**
+ * @description Fonction callback appellée à la fin des animations du menu mobile
+ */
 function InitToggleMenu() {
     var modalMenu = document.querySelector("#nav-modal");
     modalMenu.addEventListener("animationend", function () {
 
         if (modalMenu.classList.contains("anim-quick-slidein")) {
-            console.log("anim-quick-slidein ended");
             modalMenu.classList.remove("anim-quick-slidein");
         }
         else if (modalMenu.classList.contains("anim-quick-slideout")) {
-            console.log("anim-quick-slideout ended");
             modalMenu.classList.remove("anim-quick-slideout");
             modalMenu.style.display = "none";
         }
@@ -131,14 +117,25 @@ function InitToggleMenu() {
 function ChangeToggleButton() {
 
     var toggleButton = document.querySelector("#nav-toggle-icon");
-    if (toggleButton.classList.contains("toggler-icon-hamburger")) {
-        ShowAppMenu();
-    }
-    else if (toggleButton.classList.contains("toggler-icon-close")) {
-        HideAppMenu();
+    var modalMenu = document.querySelector("#nav-modal");
+
+    //Validation pour éviter un bogue si l'usager clique plusieurs fois
+    //sur menu alors que l'animation n'est pas terminée
+    if (!modalMenu.classList.contains("anim-quick-slidein") &&
+        !modalMenu.classList.contains("anim-quick-slideout")) {
+
+        if (toggleButton.classList.contains("toggler-icon-hamburger")) {
+            ShowAppMenu();
+        }
+        else if (toggleButton.classList.contains("toggler-icon-close")) {
+            HideAppMenu();
+        }
     }
 }
 
+/**
+ * @description Montre le menu de navigation et joue l'animation de texte
+ */
 function ShowAppMenu() {
     var toggleButton = document.querySelector("#nav-toggle-icon");
     var modalMenu = document.querySelector("#nav-modal");
@@ -148,9 +145,25 @@ function ShowAppMenu() {
 
     modalMenu.classList.add("anim-quick-slidein");
     modalMenu.style.display = "block";
+
+    //animation fade-in progressif du texte:
+    var timel = anime.timeline({
+    });
+    timel.add({
+        targets: '.anim-menu-fade',
+        opacity: [0, 1],
+        //scaleY: [0, 1], // from 100 to 250
+        loop: false,
+        easing: 'easeInOutSine',
+        duration: 175,
+        delay: anime.stagger(100)
+    });
+
 }
 
-
+/**
+ * @description Cache le menu de navigation
+ */
 function HideAppMenu() {
     var toggleButton = document.querySelector("#nav-toggle-icon");
     var modalMenu = document.querySelector("#nav-modal");
@@ -160,6 +173,12 @@ function HideAppMenu() {
 
     modalMenu.classList.add("anim-quick-slideout");
 }
+
+
+
+
+
+
 
 
 
@@ -227,11 +246,11 @@ function RetourHautPage() {
     $('html, body').animate({
         scrollTop: "0px"
     }, 800);
-
+/* 
     var mq = window.matchMedia("(max-width: 768px)");
     if (mq.matches) {
         HideAppMenu();
-    }
+    } */
 }
 
 function OnScroll(scrollTo) {
@@ -239,19 +258,16 @@ function OnScroll(scrollTo) {
 
     var offset = $(scrollTo).offset().top;
 
-    //cacher le menu de navigation si sur mobile
-    var mq = window.matchMedia("(max-width: 768px)");
+    //Compenser pour barre de navigation si sur mobile ($lg + 120)
+    var mq = window.matchMedia("(max-width: 1112px)");
     if (mq.matches) {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: offset - 56
-        }, 800);
+        offset -= 56;
+    }
 
-        HideAppMenu();
-    }
-    else {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: offset
-        }, 800);
-    }
+    $([document.documentElement, document.body]).animate({
+        scrollTop: offset
+    }, 800);
+
+    //HideAppMenu();
 
 }

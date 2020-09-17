@@ -80,7 +80,7 @@ Définitions de composantes graphiques réutilisables
 
 //Texte flottant 
 #css-overrides .float-text {
-    padding: 15px;
+    padding: 0px;
     margin-top: 0px;
     margin-bottom: $elementStdMargin;
     //border-bottom: 2px solid $line-accent;
@@ -89,9 +89,15 @@ Définitions de composantes graphiques réutilisables
         color: $mainTextColor;
     }
 
+    p {
+        margin-bottom: 0.8rem;
+        margin-top: 0.8rem;
+    }
+
     @media (max-width: $md) {
         p {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.1rem;
+            margin-top: 0.1rem;
         }
     }
 }
@@ -107,6 +113,7 @@ Définitions de composantes graphiques réutilisables
 //Boite flottante avec fond peach
 #css-overrides .float-box {
     @extend .float-text;
+    padding: 15px;
     background-color: $bg-peach;
     box-shadow: 7px 11px 3px 0px rgba(181, 177, 181, 1);
 }

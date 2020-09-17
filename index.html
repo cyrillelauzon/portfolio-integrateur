@@ -33,41 +33,43 @@
     <!-- Barre de navigation -->
     <nav class="navbar navbar-light sticky-top" data-toggle="affix">
 
-      <div class="nav-toggler-wrapper text-center">
+      <div class="nav-toggler-wrapper">
         <button class="navbar-toggler" onclick="ChangeToggleButton()" type="button" data-toggle="collapse"
           aria-expanded="false" aria-label="Toggle navigation">
           <span id="nav-toggle-icon" class="navbar-toggler-icon toggler-icon-hamburger"></span>
         </button>
       </div>
 
-      <div id="nav-modal" class="collapse anim-quick-slidein" data-backdrop="static">
+      <div id="nav-modal" class="collapse" data-backdrop="static">
         <ul>
           <li class="nav-item">
-            <a class="navbar-brand" href="" onclick="RetourHautPage();">Cyrille Lauzon</a>
+            <a class="navbar-brand" href="" onclick="RetourHautPage(); HideAppMenu();">Cyrille Lauzon</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#section-realisations"
-              onclick="OnScroll('#section-realisations')">Réalisations</a>
+            <a class="nav-link anim-menu-fade" href="#section-realisations"
+              onclick="OnScroll('#section-realisations'); HideAppMenu();">Réalisations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#section-competences" onclick="OnScroll('#section-competences')">Compétences</a>
+            <a class="nav-link anim-menu-fade" href="#section-competences"
+              onclick="OnScroll('#section-competences'); HideAppMenu();">Compétences</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#section-experiences" onclick="OnScroll('#section-experiences')">Expériences de
+            <a class="nav-link anim-menu-fade" href="#section-experiences"
+              onclick="OnScroll('#section-experiences'); HideAppMenu();">Expériences de
               travail</a>
           </li>
 
           <li <ul class="text-center ">
           <li>
             <a href="https://www.linkedin.com/in/cyrille-lauzon-8b4aa91b1/" target="_blank">
-              <img class="img-media-icon" src="img/linkedin.svg" alt="Mon profil Linkedin" /></a>
+              <img class="img-media-icon anim-menu-fade" src="img/linkedin.svg" alt="Mon profil Linkedin" /></a>
             &nbsp;
 
             <a href="https://github.com/cyrillelauzon" target="_blank">
-              <img class="img-media-icon" src="img/github.svg" alt="Ma page Github" /></a>
+              <img class="img-media-icon anim-menu-fade" src="img/github.svg" alt="Ma page Github" /></a>
             &nbsp;
-            <a href="mailto:cyrillelauzon@gmail.com"><img class="img-media-icon" src="img/email.svg"
+            <a href="mailto:cyrillelauzon@gmail.com"><img class="img-media-icon anim-menu-fade" src="img/email.svg"
                 alt="Mon adresse courriel" /></a>
           </li>
         </ul>
@@ -120,7 +122,7 @@
                 très
                 bon sens de la
                 composition et du détail</p>
-              <p class="text-center anim-prog-fade">Soucis du code bien documenté et respect des standards du
+              <p class="text-center anim-prog-fade">Souci du code bien documenté et respect des standards du
                 web</p>
               <span class="line anim-line"></span>
             </div>
@@ -130,12 +132,14 @@
                 class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-              </svg></a>
+              </svg>
+            </a>
 
           </div>
           <div class="col-md-3"></div>
         </div>
       </div>
+
       <div class="section-spacer"></div>
     </section>
 
@@ -165,20 +169,8 @@
                   </ul>
                 </div>
               </div>
-              <br />
-
-              <div class="float-box">
-                <ul class="ul-dash">
-                  <li>Design et programmation d'un thème Wordpress réactif qui s'adapte à tout appareil. Implantation du
-                    thème sur deux
-                    sites webs distincts.</li>
-                  <li>Emploi de Bootstrap 4, Sass (variables, mixins, préfixes de navigateur) et PHP</li>
-                  <li><a href="https://github.com/cyrillelauzon/minimal-gray" class="underlined" target="_blank">Tous
-                      les
-                      détails sont disponibles sur la page Github du projet</a></li>
-                </ul>
-              </div>
             </div>
+            <br />
             <div class="col-md-6">
               <div class="card">
                 <a href="http://suzanvachon.org" target="_blank"><img class="card-img-top" src="img/suzanvachon.jpg"
@@ -192,9 +184,38 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="float-box">
+                <ul class="ul-dash">
+                  <li>Design et programmation d'un thème Wordpress réactif qui s'adapte à tout appareil. Implantation du
+                    thème sur deux
+                    sites webs distincts.</li>
+                  <li>Emploi de Bootstrap 4, Sass (variables, mixins, préfixes de navigateur) et PHP</li>
+                  <li><a href="https://github.com/cyrillelauzon/minimal-gray" class="underlined" target="_blank">Tous
+                      les
+                      détails sont disponibles sur la page Github du projet</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-12 text-center" style="width: 100%;">
+              <a href="#section-competences" class="text-center" onclick="OnScroll('#section-competences')">
+                <svg class="anim-pulse-light button-down" width="1.4em" height="1.4em" viewBox="0 0 16 16"
+                  class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                </svg>
+              </a>
+            </div>
           </div>
+
+
+          <div class="section-spacer-small"></div>
         </div>
-        <div class="section-spacer-small"></div>
       </div>
 
     </section>
@@ -206,40 +227,7 @@
         <h2>Compétences</h2>
 
         <div class="row">
-          <!-- Boite flottante Formation -->
-          <div class="col-md-3">
-            <div class="float-text">
-              <h3>Formation</h3>
-              <ul>
-                <li>Maîtrise arts visuels et médiatiques
-                  <ul class="ul-code-subsection">
-                    <li class="muted">Université du Québec à
-                      Montréal<br />(2020)</li>
-                  </ul>
-                </li>
 
-                <li>Certificat en informatique appliquée
-                  <ul class="ul-code-subsection">
-                    <li class="muted">Université de
-                      Montréal<br />(2015)</li>
-                  </ul>
-                </li>
-              </ul>
-
-              <hr />
-              <ul>
-                <li>Langues
-                  <ul class="ul-code-subsection">
-                    <li class="muted">Maîtrise de la langue française</li>
-                    <li class="muted">Anglais parlé et écrit</li>
-                    <li class="muted">Espagnol parlé</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-
-          </div>
           <!-- Boite flottante programmation -->
           <div class="col-md-9">
             <div class="float-box">
@@ -289,9 +277,56 @@
           </div>
 
 
+          <!-- Boite flottante Formation -->
+          <div class="col-md-3">
+            <div class="float-text">
+              <h3>Formation</h3>
+              <ul>
+                <li>Maîtrise arts visuels et médiatiques
+                  <ul class="ul-code-subsection">
+                    <li class="muted">Université du Québec à
+                      Montréal<br />(2020)</li>
+                  </ul>
+                </li>
+
+                <li>Certificat en informatique appliquée
+                  <ul class="ul-code-subsection">
+                    <li class="muted">Université de
+                      Montréal<br />(2015)</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <hr />
+              <ul>
+                <li>Langues
+                  <ul class="ul-code-subsection">
+                    <li class="muted">Maîtrise de la langue française</li>
+                    <li class="muted">Anglais parlé et écrit</li>
+                    <li class="muted">Espagnol parlé</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+
+
+          <div class="col-md-12 text-center" style="width: 100%;">
+            <a href="#section-experiences" class="text-center" onclick="OnScroll('#section-experiences')">
+              <svg class="anim-pulse-light button-down" width="1.4em" height="1.4em" viewBox="0 0 16 16"
+                class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+              </svg>
+            </a>
+          </div>
 
 
         </div>
+
+
       </div>
       <div class="section-spacer-small"></div>
     </section>
@@ -323,22 +358,6 @@
               <br />
 
               <div class='div-emploi'>
-                <h4>Auxiliaire d’enseignement et expérience universitaire</h4>
-                <p>Université du Québec à Montréal (2016-2020)</p>
-                <ul class="ul-dash">
-
-                  <li>Auxiliaire d’enseignement parmi cinq groupes différents en arts médiatiques. Assistance aux
-                    travaux
-                    pratiques et présentations devant la classe.</li>
-                  <li>Pratique artistique en arts médiatiques : sens aiguisé de la composition et du détail. Maîtrise
-                    des
-                    outils numériques en photographie et en vidéo.</li>
-                </ul>
-              </div>
-              <br />
-              <br />
-
-              <div class='div-emploi'>
                 <h4>Conseiller aux ventes</h4>
                 <p>IKEA Ville Saint-Laurent (2007-aujourd’hui)</p>
                 <ul class="ul-dash">
@@ -354,10 +373,28 @@
               <br />
 
               <div class='div-emploi'>
+                <h4>Auxiliaire d’enseignement et expérience universitaire</h4>
+                <p>Université du Québec à Montréal (2016-2020)</p>
+                <ul class="ul-dash">
+
+                  <li>Auxiliaire d’enseignement parmi cinq groupes différents en arts médiatiques. Assistance aux
+                    travaux
+                    pratiques et présentations devant la classe.</li>
+                  <li>Pratique artistique en arts médiatiques : sens aiguisé de la composition et du détail. Maîtrise
+                    des
+                    outils numériques en photographie et en vidéo.</li>
+                </ul>
+              </div>
+              <br />
+              <br />
+
+
+
+              <div class='div-emploi'>
                 <h4>Photographe événementiel</h4>
                 <p>Travail autonome (2015-2019)</p>
                 <ul class="ul-dash">
-                  <li>Photographie d’une vingtaine d’événements corporatifs et de quelques mariages</li>
+                  <li>Photographie d’une vingtaine d’événements corporatifs et de mariages</li>
                 </ul>
               </div>
               <br />

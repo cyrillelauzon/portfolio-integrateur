@@ -297,7 +297,7 @@ Surcharges des styles spécifiques à Bootstrap
   padding-bottom: .5rem;
 }
 
-@media (max-width: 838px) {
+@media (max-width: 1112px) {
   #css-overrides .navbar {
     background-color: #d5dddf !important;
   }
@@ -305,11 +305,18 @@ Surcharges des styles spécifiques à Bootstrap
 
 #css-overrides .nav-toggler-wrapper {
   width: 20vh;
+  min-width: 250px;
   z-index: 4;
 }
 
 #css-overrides .navbar-toggler {
   z-index: 4;
+  left: 20px;
+  display: inline-block;
+  position: relative;
+  /* @media (max-width: $lg + 120 ) {
+        left:10px;
+    } */
 }
 
 .toggler-icon-hamburger {
@@ -322,7 +329,7 @@ Surcharges des styles spécifiques à Bootstrap
 
 #css-overrides .navbar-brand {
   font-family: "Roboto Condensed";
-  font-size: 18px;
+  font-size: 20px;
   color: #625e5d;
   font-weight: bold;
   text-align: center !important;
@@ -336,14 +343,18 @@ Surcharges des styles spécifiques à Bootstrap
   top: 0px;
   left: 0px;
   width: 20vh;
-  min-width: 200px;
+  min-width: 250px;
   height: 100vh;
-  background-color: #d5dddf !important;
+  background-color: #c2ccce !important;
   text-align: center;
 }
 
 #nav-modal ul {
   margin-top: 60px;
+}
+
+#nav-modal a {
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -456,7 +467,7 @@ Définitions de composantes graphiques réutilisables
 /******************************* Boites Flottantes
 /******************************************************************************/
 #css-overrides .float-text, #css-overrides .float-text-frame, #css-overrides .float-box, #css-overrides .float-box-code, #css-overrides .bio-header {
-  padding: 15px;
+  padding: 0px;
   margin-top: 0px;
   margin-bottom: 30px;
 }
@@ -465,9 +476,15 @@ Définitions de composantes graphiques réutilisables
   color: #625e5d;
 }
 
+#css-overrides .float-text p, #css-overrides .float-text-frame p, #css-overrides .float-box p, #css-overrides .float-box-code p, #css-overrides .bio-header p {
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+}
+
 @media (max-width: 768px) {
   #css-overrides .float-text p, #css-overrides .float-text-frame p, #css-overrides .float-box p, #css-overrides .float-box-code p, #css-overrides .bio-header p {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
   }
 }
 
@@ -477,6 +494,7 @@ Définitions de composantes graphiques réutilisables
 }
 
 #css-overrides .float-box, #css-overrides .float-box-code {
+  padding: 15px;
   background-color: #f6efe7;
   -webkit-box-shadow: 7px 11px 3px 0px #b5b1b5;
           box-shadow: 7px 11px 3px 0px #b5b1b5;
@@ -527,7 +545,6 @@ Définitions de composantes graphiques réutilisables
 #section-bio {
   background-color: #d5dddf;
   min-height: 100vh;
-  padding-top: 30px;
 }
 
 #section-bio-profile {
